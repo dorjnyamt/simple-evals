@@ -7,6 +7,7 @@ https://arxiv.org/abs/2210.03057 reference: https://github.com/google-research/u
 
 import re
 from typing import Optional
+import pandas as pd
 
 import blobfile as bf
 
@@ -14,9 +15,10 @@ from . import common
 from .mmlu_eval import HTML_JINJA
 from .types import Eval, EvalResult, SamplerBase, SingleEvalResult
 
-ALL_LANGUAGES = ["bn", "de", "en", "es", "fr", "ja", "ru", "sw", "te", "th", "zh"]
+# ALL_LANGUAGES = ["bn", "de", "en", "es", "fr", "ja", "ru", "sw", "te", "th", "zh", "mn"]
+ALL_LANGUAGES = ["mn"]
 LATIN_LANGUAGES = ["de", "en", "es", "fr", "sw"]
-NON_LATIN_LANGUAGES = ["bn", "ja", "ru", "te", "th", "zh"]
+NON_LATIN_LANGUAGES = ["bn", "ja", "ru", "te", "th", "zh", "mn"]
 
 LANG_TO_FPATH = {
     "bn": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_bn.tsv",
@@ -30,6 +32,7 @@ LANG_TO_FPATH = {
     "te": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_te.tsv",
     "th": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_th.tsv",
     "zh": "https://openaipublic.blob.core.windows.net/simple-evals/mgsm_zh.tsv",
+    "mn": "mongsm/mgsm_mn_test.tsv"
 }
 LANG_TO_INSTRUCTIONS = {
     "en": """Solve this math problem. Give the reasoning steps before giving the final answer on the last line by itself in the format of "Answer:". Do not add anything other than the integer answer after "Answer:".
@@ -65,6 +68,9 @@ LANG_TO_INSTRUCTIONS = {
     "zh": """解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以 "答案: " 的形式独立给出答案。在 "答案：" 后不要添加除整数答案之外的任何内容。
 
 {input}""",
+    "mn": """Энэ математикийн бодлогыг бод. Бодолтын алхамуудаа бичээд эцсийн хариултыг хамгийн сүүлийн мөрөнд “Хариулт:” гэсэн форматын дагуу бич. "Хариулт:" гэдгийн араас тооноос өөр юм битгий нэм.
+
+{input}""",
 }
 
 LANG_TO_ANSWER_PREFIX = {
@@ -79,6 +85,7 @@ LANG_TO_ANSWER_PREFIX = {
     "te": "సమాధానం",
     "th": "คำตอบ",
     "zh": "答案",
+    "mn": "Хариулт"
 }
 
 
@@ -106,18 +113,30 @@ def score_mgsm(target: str, prediction: str) -> bool:
     return target == prediction
 
 
+# def get_lang_examples(lang: str) -> list[dict[str, str]]:
+#     fpath = LANG_TO_FPATH[lang]
+#     examples = []
+#     with bf.BlobFile(fpath, "r") as f:
+#         for line in f:
+#             inputs, targets = line.strip().split("\t")
+#             if "." in targets:
+#                 raise ValueError(f"targets {targets} contains a decimal point.")
+#             # targets = int(targets.replace(",", ""))
+#             examples.append({"inputs": inputs, "targets": targets, "lang": lang})
+#     return examples
+
 def get_lang_examples(lang: str) -> list[dict[str, str]]:
     fpath = LANG_TO_FPATH[lang]
     examples = []
-    with bf.BlobFile(fpath, "r") as f:
-        for line in f:
-            inputs, targets = line.strip().split("\t")
-            if "." in targets:
-                raise ValueError(f"targets {targets} contains a decimal point.")
-            # targets = int(targets.replace(",", ""))
-            examples.append({"inputs": inputs, "targets": targets, "lang": lang})
+    df = pd.read_csv(fpath, sep="\t", header=None, names=["inputs", "targets"])
+    for _, row in df.iterrows():
+        inputs, targets = row["inputs"], row["targets"]
+        if "." in str(targets):
+            raise ValueError(f"targets {targets} contains a decimal point.")
+        examples.append({"inputs": inputs, "targets": str(targets), "lang": lang})
+    if lang == "mn":
+        print(examples)
     return examples
-
 
 def get_all_examples() -> list[dict[str, str]]:
     examples = []
@@ -170,7 +189,7 @@ class MGSMEval(Eval):
 
             answer_prefix = LANG_TO_ANSWER_PREFIX[language]
             extracted_answer = parse_answer(response_text, answer_prefix)
-
+            print(f"Correct answer {correct_answer} and Extracted answer {extracted_answer}")
             score = score_mgsm(correct_answer, extracted_answer)
             html = common.jinja_env.from_string(HTML_JINJA).render(
                 prompt_messages=prompt_messages,

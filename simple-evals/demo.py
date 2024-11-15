@@ -5,7 +5,7 @@ import pandas as pd
 from . import common
 from .drop_eval import DropEval
 from .gpqa_eval import GPQAEval
-from .humaneval_eval import HumanEval
+# from .humaneval_eval import HumanEval
 from .math_eval import MathEval
 from .mgsm_eval import MGSMEval
 from .mmlu_eval import MMLUEval
@@ -21,42 +21,48 @@ from .sampler.claude_sampler import ClaudeCompletionSampler, CLAUDE_SYSTEM_MESSA
 
 
 def main():
-    debug = True
+    debug = False
     samplers = {
         # chatgpt models:
-        "o1-preview": O1ChatCompletionSampler(
-            model="o1-preview",
-        ),
-        "o1-mini": O1ChatCompletionSampler(
-            model="o1-mini",
-        ),
-        "gpt-4-turbo-2024-04-09_assistant": ChatCompletionSampler(
-            model="gpt-4-turbo-2024-04-09",
-            system_message=OPENAI_SYSTEM_MESSAGE_API,
-        ),
-        "gpt-4-turbo-2024-04-09_chatgpt": ChatCompletionSampler(
-            model="gpt-4-turbo-2024-04-09",
-            system_message=OPENAI_SYSTEM_MESSAGE_CHATGPT,
-        ),
-        "gpt-4o_assistant": ChatCompletionSampler(
-            model="gpt-4o",
-            system_message=OPENAI_SYSTEM_MESSAGE_API,
-            max_tokens=2048,
-        ),
-        "gpt-4o_chatgpt": ChatCompletionSampler(
-            model="gpt-4o",
-            system_message=OPENAI_SYSTEM_MESSAGE_CHATGPT,
-            max_tokens=2048,
-        ),
-        "gpt-4o-mini-2024-07-18": ChatCompletionSampler(
-            model="gpt-4o-mini-2024-07-18",
-            system_message=OPENAI_SYSTEM_MESSAGE_API,
-            max_tokens=2048,
-        ),
+        # "o1-preview": O1ChatCompletionSampler(
+        #     model="o1-preview",
+        # ),
+        # "o1-mini": O1ChatCompletionSampler(
+        #     model="o1-mini",
+        # ),
+        # "gpt-4-turbo-2024-04-09_assistant": ChatCompletionSampler(
+        #     model="gpt-4-turbo-2024-04-09",
+        #     system_message=OPENAI_SYSTEM_MESSAGE_API,
+        # ),
+        # "gpt-4-turbo-2024-04-09_chatgpt": ChatCompletionSampler(
+        #     model="gpt-4-turbo-2024-04-09",
+        #     system_message=OPENAI_SYSTEM_MESSAGE_CHATGPT,
+        # ),
+        # "gpt-4o_assistant": ChatCompletionSampler(
+        #     model="gpt-4o",
+        #     system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        # ),
+        # "gpt-4o_chatgpt": ChatCompletionSampler(
+        #     model="gpt-4o",
+        #     system_message=OPENAI_SYSTEM_MESSAGE_CHATGPT,
+        #     max_tokens=2048,
+        # ),
+        # "gpt-4o-mini-2024-07-18": ChatCompletionSampler(
+        #     model="gpt-4o-mini-2024-07-18",
+        #     system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        # ),
         # claude models:
         # "claude-3-opus-20240229_empty": ClaudeCompletionSampler(
         #     model="claude-3-opus-20240229", system_message=None,
         # ),
+        "gemma-2-9b-it": ChatCompletionSampler(
+            model="gemma-2-9b-it",
+            system_message=OPENAI_SYSTEM_MESSAGE_API,
+            max_tokens=2048,
+            base_url="http://localhost:1234/v1"
+        )
     }
 
     grading_sampler = ChatCompletionSampler(model="gpt-4o")
@@ -75,11 +81,11 @@ def main():
             case "gpqa":
                 return GPQAEval(n_repeats=10 if debug else 1, num_examples=5 if debug else None)
             case "mgsm":
-                return MGSMEval(num_examples_per_lang=10 if debug else 250)
+                return MGSMEval(num_examples_per_lang=2 if debug else 250)
             case "drop":
                 return DropEval(num_examples=10 if debug else 2000, train_samples_per_prompt=3)
-            case "humaneval":
-                return HumanEval(num_examples=10 if debug else None)
+            # case "humaneval":
+            #     return HumanEval(num_examples=10 if debug else None)
             case "simpleqa":
                 return SimpleQAEval(
                     grader_model = grading_sampler, 
@@ -88,7 +94,8 @@ def main():
                 raise Exception(f"Unrecoginized eval type: {eval_name}")
 
     evals = {
-        eval_name: get_evals(eval_name) for eval_name in ["simpleqa", "mmlu", "math", "gpqa", "mgsm", "drop"]
+        # eval_name: get_evals(eval_name) for eval_name in ["simpleqa", "mmlu", "math", "gpqa", "mgsm", "drop"]
+        eval_name: get_evals(eval_name) for eval_name in ["mgsm"]
     }
     print(evals)
     debug_suffix = "_DEBUG" if debug else ""
@@ -99,13 +106,13 @@ def main():
             result = eval_obj(sampler)
             # ^^^ how to use a sampler
             file_stem = f"{eval_name}_{sampler_name}"
-            report_filename = f"/tmp/{file_stem}{debug_suffix}.html"
+            report_filename = f"results/{file_stem}{debug_suffix}.html"
             print(f"Writing report to {report_filename}")
             with open(report_filename, "w") as fh:
                 fh.write(common.make_report(result))
             metrics = result.metrics | {"score": result.score}
             print(metrics)
-            result_filename = f"/tmp/{file_stem}{debug_suffix}.json"
+            result_filename = f"results/{file_stem}{debug_suffix}.json"
             with open(result_filename, "w") as f:
                 f.write(json.dumps(metrics, indent=2))
             print(f"Writing results to {result_filename}")

@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.792</td>
+    </tr>
+    
+    <tr>
+        <td>bn</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>bn:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>group_non_latin</td>
+        <td>0.7142857142857143</td>
+    </tr>
+    
+    <tr>
+        <td>group_non_latin:std</td>
+        <td>0.45175395145262565</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.4061164310337068</td>
+    </tr>
+    
+    <tr>
+        <td>de</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>de:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>group_latin</td>
+        <td>0.9</td>
+    </tr>
+    
+    <tr>
+        <td>group_latin:std</td>
+        <td>0.30000000000000004</td>
+    </tr>
+    
+    <tr>
+        <td>en</td>
+        <td>0.5</td>
+    </tr>
+    
+    <tr>
+        <td>en:std</td>
+        <td>0.5</td>
+    </tr>
+    
+    <tr>
+        <td>es</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>es:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>fr</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>fr:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>ja</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>ja:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>ru</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>ru:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>sw</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>sw:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>te</td>
+        <td>0.5</td>
+    </tr>
+    
+    <tr>
+        <td>te:std</td>
+        <td>0.5</td>
+    </tr>
+    
+    <tr>
+        <td>th</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>th:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>zh</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>zh:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>mn</td>
+        <td>0.5</td>
+    </tr>
+    
+    <tr>
+        <td>mn:std</td>
+        <td>0.5</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>এই গণিতের সমস্যাটি সমাধান করুন। চূড়ান্ত উত্তর দেওয়ার আগে যুক্তিসম্পন্ন পদক্ষেপ প্রদান করুন। চূড়ান্ত উত্তরটি একক সংখ্যা হিসাবে &#34;উত্তর:&#34; এর পরে শেষ লাইনে দিন। &#34;উত্তর:&#34; এর পরে অন্য কিছু যুক্ত করবেন না।.
+
+জেনেটের হাঁসগুলি প্রতিদিন 16টি করে ডিম পাড়ে। তিনি প্রতিদিন প্রাতরাশে তিনটি করে ডিম খান এবং বন্ধুদের জন্য প্রতিদিন চারটি ডিম দিয়ে মাফিন তৈরি করেন। অবশিষ্ট হাঁসের ডিমগুলি তিনি প্রতিদিন কৃষকদের বাজারে প্রতি ডিম $2 দরে বিক্রয় করেন। তিনি কৃষকদের বাজারে প্রতিদিন কত ডলার উপার্জন করেন?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>জেনেটের হাঁসগুলি প্রতিদিন মোট ১৬টি ডিম পাড়ে।
+
+প্রতিদিন তিনি প্রাতরাশে ৩টি ডিম খান এবং বন্ধুদের জন্য ৪টি ডিম দিয়ে মাফিন তৈরি করেন। 
+তাহলে মোট ব্যবহৃত ডিম হচ্ছে:
+৩ + ৪ = ৭টি ডিম
+
+অবশিষ্ট ডিম:
+১৬ - ৭ = ৯টি ডিম
+
+প্রতি ডিম বিক্রয়ের দাম $২ হলে, তাঁর দৈনিক আয় হবে:
+৯ × ২ = $১৮
+
+**উত্তর: ১৮**</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: ১৮</p>
+<p>Score: False</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>এই গণিতের সমস্যাটি সমাধান করুন। চূড়ান্ত উত্তর দেওয়ার আগে যুক্তিসম্পন্ন পদক্ষেপ প্রদান করুন। চূড়ান্ত উত্তরটি একক সংখ্যা হিসাবে &#34;উত্তর:&#34; এর পরে শেষ লাইনে দিন। &#34;উত্তর:&#34; এর পরে অন্য কিছু যুক্ত করবেন না।.
+
+একটি পোশাক তৈরি করতে 2 রিল নীল সুতো এবং তার অর্ধেক সাদা সুতো লাগে। এটি তৈরি করতে মোট কতগুলি রিল লাগবে?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>প্রথমে নীল সুতের রিল সংখ্যা এবং সাদা সুতের রিল সংখ্যাকে যোগ করতে হবে।
+
+নীল সুতো: ২ রিল  
+সাদা সুতো: ১/২ রিল
+
+মোট রিল = ২ + ১/২ = ২.৫ রিল
+
+**উত্তর:  
+২.৫**</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: ২.৫</p>
+<p>Score: False</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Löse dieses Mathematikproblem. Gib die Schritte zur Begründung an, bevor du die endgültige Antwort in der letzten Zeile alleine im Format &#34;Antwort:&#34; gibst. Füge nichts anderes als die ganzzahlige Antwort nach &#34;Antwort:&#34; hinzu.
+
+Janets Enten legen 16 Eier pro Tag. Sie isst drei jeden Morgen zum Frühstück und backt mit vier jeden Tag Muffins für ihre Freunde. Den Rest verkauft sie täglich auf dem Bauernmarkt für 2 US-Dollar pro frischem Entenei. Wie viel Dollar nimmt sie täglich auf dem Bauernmarkt ein?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Janets Enten legen insgesamt 16 Eier pro Tag.  
+Sie isst 3 Eier zum Frühstück und verwendet 4 Eier zum Backen von Muffins.  
+Das bedeutet, sie verwendet insgesamt 3 + 4 = 7 Eier.  
+Die Anzahl der verkauften Eier ist daher 16 - 7 = 9 Eier.  
+Jedes verkaufte Ei bringt ihr 2 US-Dollar ein.  
+Daher verdient sie täglich 9 * 2 = 18 US-Dollar auf dem Bauernmarkt.
+
+Antwort: 18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Löse dieses Mathematikproblem. Gib die Schritte zur Begründung an, bevor du die endgültige Antwort in der letzten Zeile alleine im Format &#34;Antwort:&#34; gibst. Füge nichts anderes als die ganzzahlige Antwort nach &#34;Antwort:&#34; hinzu.
+
+Ein Kleid erfordert 2 Knäuel blaue Wolle und halb so viel weiße Wolle. Wie viele Knäuel braucht man insgesamt?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Ein Kleid erfordert 2 Knäuel blaue Wolle.  
+Die benötigte Menge weiße Wolle ist halb so viel wie blaue Wolle, also 1 Knäuel.  
+Die Gesamtanzahl der Knäuel ist 2 + 1 = 3.
+
+Antwort: 3</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 3</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Solve this math problem. Give the reasoning steps before giving the final answer on the last line by itself in the format of &#34;Answer:&#34;. Do not add anything other than the integer answer after &#34;Answer:&#34;.
+
+Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers&#39; market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers&#39; market?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Janet&#39;s ducks lay a total of 16 eggs per day. She consumes 3 eggs for breakfast and uses 4 eggs for baking muffins, which totals 7 eggs. Therefore, the number of eggs she sells is:
+
+16 eggs - 7 eggs = 9 eggs
+
+She sells each egg for $2, so her daily earnings from selling eggs are:
+
+9 eggs * $2/egg = $18
+
+Answer:
+18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Solve this math problem. Give the reasoning steps before giving the final answer on the last line by itself in the format of &#34;Answer:&#34;. Do not add anything other than the integer answer after &#34;Answer:&#34;.
+
+A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre></pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: </p>
+<p>Score: False</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Resuelve este problema matemático. Proporciona los pasos de razonamiento antes de dar la respuesta final en la última línea por sí misma en el formato de &#34;Respuesta:&#34;. No añadas nada más que la respuesta entera después de &#34;Respuesta:&#34;.
+
+Los patos de Janet ponen 16 huevos por día. Ella come tres en el desayuno todas las mañanas y usa cuatro para hornear magdalenas para sus amigos todos los días. Vende lo que sobra en el mercado de productores diariamente a $2 el huevo fresco de pato. ¿Cuánto gana en dólares todos los días en el mercado de productores?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Janet tiene un total de 16 huevos por día.
+Ella consume 3 huevos en el desayuno y utiliza 4 para hornear magdalenas, sumando un total de 7 huevos consumidos diariamente.
+El número de huevos que le quedan para vender es 16 - 7 = 9 huevos.
+Cada huevo se vende a $2, por lo que sus ganancias diarias son 9 × 2 = $18.
+
+Respuesta:
+18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Resuelve este problema matemático. Proporciona los pasos de razonamiento antes de dar la respuesta final en la última línea por sí misma en el formato de &#34;Respuesta:&#34;. No añadas nada más que la respuesta entera después de &#34;Respuesta:&#34;.
+
+Una bata lleva 2 rollos de tela azul y la mitad de esa cantidad de tela blanca. ¿Cuántos rollos se necesitan en total?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Para fabricar una bata se requieren 2 rollos de tela azul. La mitad de esta cantidad para tela blanca es 2 ÷ 2 = 1 rollo. 
+
+En total, se necesitan 2 rollos de tela azul + 1 rollo de tela blanca = 3 rollos.
+
+**Respuesta:** 3 rollos</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 3</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Résolvez ce problème de mathématiques. Donnez les étapes de raisonnement avant de fournir la réponse finale sur la dernière ligne elle-même dans le format de &#34;Réponse:&#34;. N&#39;ajoutez rien d&#39;autre que la réponse entière après &#34;Réponse:&#34;.
+
+Les canes de Janet pondent 16 œufs par jour. Chaque matin, elle en mange trois au petit déjeuner et en utilise quatre autres pour préparer des muffins pour ses amis. Ce qui reste, elle le vend quotidiennement au marché fermier, au prix de 2 $ l&#39;œuf de cane frais. Combien (en dollars) gagne-t-elle chaque jour au marché fermier ?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Nombre total d&#39;œufs pondus par jour : 16 œufs.  
+Œufs consommés au petit déjeuner : 3 œufs.  
+Œufs utilisés pour les muffins : 4 œufs.  
+Total d&#39;œufs utilisés quotidiennement : 3 + 4 = 7 œufs.  
+Œufs restants à vendre : 16 - 7 = 9 œufs.  
+Revenu quotidien au marché fermier : 9 œufs × 2 $/œuf = 18 $.  
+Réponse: 18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Résolvez ce problème de mathématiques. Donnez les étapes de raisonnement avant de fournir la réponse finale sur la dernière ligne elle-même dans le format de &#34;Réponse:&#34;. N&#39;ajoutez rien d&#39;autre que la réponse entière après &#34;Réponse:&#34;.
+
+Une robe nécessite 2 rouleaux de fibre bleue et la moitié de cette quantité en fibre blanche. Combien faut-il de rouleaux au total ?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>La robe nécessite 2 rouleaux de fibre bleue.  
+La quantité de fibre blanche requise est la moitié de celle de la fibre bleue, donc 2 ÷ 2 = 1 rouleau.  
+Le nombre total de rouleaux nécessaires est donc 2 + 1 = 3.
+
+Réponse: 3</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 3</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>の数学の問題を解いてください。最終的な答えを出す前に、解答の推論過程を記述してください。そして最後の行には &#34;答え:&#34; の形式で答えを記述し、その後には整数の答え以外何も追加しないでください。
+
+ジャネットのアヒルは1日に16個の卵を生みます。ジャネットは毎朝朝食の一環で3個を消費し、毎日4個使って友達向けにマフィンを焼きます。残りを市場で1個あたり2ドルの価格で売ります。彼女は毎日市場でいくら手に入れていますか？</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>ジャネットのアヒルは1日に16個の卵を生みます。
+朝食で3個を消費し、マフィン用に4個を使用します。
+消費された卵の合計は3 + 4 = 7個です。
+残りの卵は16 - 7 = 9個です。
+市場での売却額は9個 × 2ドル = 18ドルです。
+
+答え:18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>の数学の問題を解いてください。最終的な答えを出す前に、解答の推論過程を記述してください。そして最後の行には &#34;答え:&#34; の形式で答えを記述し、その後には整数の答え以外何も追加しないでください。
+
+ローブを作成するには、青色の繊維を2巻分、白色の繊維をその半分用いる必要があります。全体で何巻必要ですか？</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>ローブを作成するためには、青色の繊維が2巻必要です。白色の繊維はその半分なので、1巻となります。したがって、全体で必要な繊維の巻数は2巻 + 1巻 = 3巻です。
+
+答え:3</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 3</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Решите эту математическую задачу. Объясните шаги рассуждения перед тем, как дать окончательный ответ в последней строке сам по себе в формате &#34;Ответ:&#34;. Не добавляйте ничего, кроме целочисленного ответа после &#34;Ответ:&#34;.
+
+Утки Дженет несут по 16 яиц в день. Она ест три на завтрак каждое утро и печет кексы для своих друзей каждый день, используя четыре. Остаток она каждый день продает на фермерском рынке по 2 $ за свежее утиное яйцо. Сколько в долларах она зарабатывает на фермерском рынке каждый день?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>У Дженет ежедневно есть 16 яиц. Она использует 3 яйца на завтрак и 4 яйца для выпечки кексов, всего 7 яиц. Остаток составляет 16 - 7 = 9 яиц. Эти 9 яиц она продает по 2 доллара за каждое, что дает 9 * 2 = 18 долларов.
+
+Ответ:
+18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Решите эту математическую задачу. Объясните шаги рассуждения перед тем, как дать окончательный ответ в последней строке сам по себе в формате &#34;Ответ:&#34;. Не добавляйте ничего, кроме целочисленного ответа после &#34;Ответ:&#34;.
+
+Для халата требуется 2 мотка синей пряжи и вполовину меньше белой пряжи. Сколько всего мотков требуется?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Для халата требуется 2 мотка синей пряжи. Белой пряжи нужно в половину меньше, то есть 1 моток. Всего требуется 2 + 1 = 3 мотка.
+
+Ответ: 3</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 3</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Suluhisha tatizo hili la hesabu. Toa hatua za mantiki kabla ya kutoa jibu la mwisho kwenye mstari wa mwisho peke yake katika muundo wa &#34;Jibu:&#34;. Usiongeze chochote kingine isipokuwa jibu la integer baada ya &#34;Jibu:&#34;.
+
+Bata wa Janet hutaga mayai 16 kila siku. Huwa anakula matatu wakati wa staftahi kila asubuhi na huokea marafiki zake mafini kila siku kwa mayai manne. Huwa anauza yaliyosalia katika soko la wakulima kila siku kwa $2 kwa kila yai la bata. Huwa anatengeneza pesa ngapi katika dola kila siku katika soko la wakulima?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Jibu: 18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Suluhisha tatizo hili la hesabu. Toa hatua za mantiki kabla ya kutoa jibu la mwisho kwenye mstari wa mwisho peke yake katika muundo wa &#34;Jibu:&#34;. Usiongeze chochote kingine isipokuwa jibu la integer baada ya &#34;Jibu:&#34;.
+
+Joho hutumia komeo 2 za ufumwele wa buluu na nusu ya kiasi hicho cha ufumwele mweupe. Huwa inatumia jumla ya komeo ngapi?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Hatua za Mantiki:
+Joho hutumia komeo 2 za ufumwele wa buluu.
+Anatumia nusu ya kiasi hicho cha ufumwele mweupe, yaani 2 * 1/2 = 1 komeo.
+Jumla ya komeo hutumiwa ni 2 + 1 = 3.
+
+Jibu: 3</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 3</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>ఈ గణిత సమస్యను పరిష్కరించండి. చివరి సమాధానాన్ని ఇవ్వదానికి ముందు తర్కాత్మక అదుగులను ఇవ్వండి. చివరి పంక్తిలో మాత్రమే &#39;సమాధానం:&#39; అనే ఆకారంలో చివరి సమాధానాద్ని ఇవ్వండి సమాధానం: తర్వాత పూర్ణాంక సమాధానానికి తప్పించి ఎదేనా చేర్చవద్దు.
+
+జనెత్ బాతులు ప్రతిరోజూ 16 గుడ్లు పెడతాయి. ఆమె ప్రతిరోజూ ఉదయం అల్పాహారం కొరకు మూడు గుడ్లు తింటుంది మరియు ప్రతిరోజూ నాలుగింటితో తన స్నేహితుల కొరకు మఫిన్‌లు బేక్ చేస్తుంది. ఆమె మిగిలిన వాటిని రోజూ రైతు మార్కెట్ వద్ద ప్రతి తాజా బాతు గుడ్డును $2కు విక్రయిస్తుంది. ఆమె రైతు మార్కెట్ వద్ద ప్రతిరోజూ ఎన్ని డాలర్లు సంపాదిస్తుంది?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>1. జనెత్ ప్రతిరోజు 16 గుడ్లు పెడతారు.
+2. ఉదయాన్నే అల్పాహారం కోసం 3 గుడ్లను తింటారు.
+3. ప్రతిరోజూ 4 గుడ్లతో మఫిన్‌లు బేక్ చేస్తారు.
+4. మొత్తం ఉపయోగించిన గుడ్ల సంఖ్య: 3 + 4 = 7 గుడ్లు.
+5. మిగిలిన గుడ్ల సంఖ్య: 16 - 7 = 9 గుడ్లు.
+6. రైతు మార్కెట్ వద్ద ప్రతి గుడ్డును $2కు విక్రయిస్తారు.
+7. రోజువారీ ఆదాయం: 9 × 2 = $18.
+
+సమాధానం: 18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>ఈ గణిత సమస్యను పరిష్కరించండి. చివరి సమాధానాన్ని ఇవ్వదానికి ముందు తర్కాత్మక అదుగులను ఇవ్వండి. చివరి పంక్తిలో మాత్రమే &#39;సమాధానం:&#39; అనే ఆకారంలో చివరి సమాధానాద్ని ఇవ్వండి సమాధానం: తర్వాత పూర్ణాంక సమాధానానికి తప్పించి ఎదేనా చేర్చవద్దు.
+
+ఒక రోబ్ 2 బోల్ట్‌ల బ్లూ ఫైబర్ మరియు దానిలో సగం వైట్ ఫైబర్‌ని తీసుకుంది. అది మొత్తం ఎన్ని బోల్ట్‌లను తీసుకుంది?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>మొత్తం బోల్ట్‌లను లెక్కించడానికి, రెండు తర్కాత్మక దశలు ఉన్నాయి:
+
+1. రోబ్‌కు 2 బోల్ట్‌ల బ్లూ ఫైబర్ ఉంది.
+2. అదనంగా, అది 0.5 బోల్ట్‌ల వైట్ ఫైబర్‌ను తీసుకుంది.
+
+ఇప్పుడు మొత్తం బోల్ట్‌లు = బ్లూ ఫైబర్ + వైట్ ఫైబర్ = 2 + 0.5 = 2.5 బోల్ట్‌లు.
+
+**సమాధానం:** 2.5</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 2.5</p>
+<p>Score: False</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>แก้ปัญหาคณิตศาสตร์นี้ ให้ให้ขั้นตอนการใช้เหตุผลก่อนที่จะให้คำตอบสุดท้ายในบรรทัดสุดท้ายโดยอยู่ในรูปแบบ &#34;คำตอบ:&#34; ไม่ควรเพิ่มอะไรนอกจากคำตอบที่เป็นจำนวนเต็มหลังจาก &#34;คำตอบ:&#34;
+
+เป็ดของเจเน็ตวางไข่วันละ 16 ฟอง เธอกินไข่สามฟองเป็นมื้อเช้าทุกวัน และใช้ไข่สี่ฟองอบมัฟฟินให้เพื่อนทุกวัน เธอขายไข่ที่เหลือที่ตลาดเกษตรกรทุกวันในราคา $2 ต่อไข่เป็ดสดหนึ่งฟอง เธอจะมีรายได้จากตลาดเกษตรกรวันละกี่ดอลลาร์</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>เป็ดของเจเน็ตวางไข่วันละ 16 ฟอง  
+เธอกินไข่เป็นมื้อเช้า 3 ฟอง  
+ใช้ไข่อบมัฟฟิน 4 ฟอง  
+ไข่ที่เหลือจะเป็น 16 - 3 - 4 = 9 ฟอง  
+รายได้จากการขายไข่จะเป็น 9 × $2 = $18
+
+คำตอบ: 18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>แก้ปัญหาคณิตศาสตร์นี้ ให้ให้ขั้นตอนการใช้เหตุผลก่อนที่จะให้คำตอบสุดท้ายในบรรทัดสุดท้ายโดยอยู่ในรูปแบบ &#34;คำตอบ:&#34; ไม่ควรเพิ่มอะไรนอกจากคำตอบที่เป็นจำนวนเต็มหลังจาก &#34;คำตอบ:&#34;
+
+เสื้อคลุมหนึ่งตัวใช้ผ้าสีน้ำเงิน 2 ม้วน และใช้ผ้าสีขาวเป็นครึ่งหนึ่งของผ้าสีน้ำเงิน เสื้อคลุมหนึ่งตัวใช้ผ้าทั้งหมดกี่ม้วน</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>ขั้นตอนการแก้ปัญหา:
+
+1. เสื้อคลุมหนึ่งตัวใช้ผ้าสีน้ำเงิน 2 ม้วน
+2. ผ้าสีขาวที่ใช้คือครึ่งหนึ่งของผ้าสีน้ำเงิน ดังนั้นใช้ผ้าสีขาว 1 ม้วน
+3. รวมผ้าในการทำเสื้อคลุมหนึ่งตัวคือ 2 ม้วน (น้ำเงิน) + 1 ม้วน (ขาว) = 3 ม้วน
+
+คำตอบ: 3</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 3</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以 &#34;答案: &#34; 的形式独立给出答案。在 &#34;答案：&#34; 后不要添加除整数答案之外的任何内容。
+
+珍妮特的鸭子每天下 16 颗蛋。她每天早上早餐时吃 3 颗，每天用 4 颗为自己的朋友做松饼。剩下的鸭蛋她每天拿去农贸市场卖，每颗新鲜鸭蛋卖 2 美元。她每天在农贸市场赚多少钱？</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>珍妮特每天鸭子产蛋数为16颗。
+她每天早餐吃3颗蛋，用于做松饼的蛋有4颗。
+剩余用于销售的蛋数量为16 - 3 - 4 = 9颗。
+每颗蛋卖2美元，每天的销售收入为9 × 2 = 18美元。
+
+答案: 18</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以 &#34;答案: &#34; 的形式独立给出答案。在 &#34;答案：&#34; 后不要添加除整数答案之外的任何内容。
+
+制作一件袍子需要 2 匹蓝色纤维布料和这个数量一半的白色纤维布料。它一共需要用掉多少匹布料？</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>制作一件袍子需要的蓝色纤维布料是 2 匹。白色纤维布料的数量是一半，即 2 ÷ 2 = 1 匹。  
+总共需要的布料数量为蓝色和白色布料之和，即 2 + 1 = 3 匹。
+
+答案: 3</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 3</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Энэ математикийн бодлогыг бод. Бодолтын алхамуудаа бичээд эцсийн хариултыг хамгийн сүүлийн мөрөнд “Хариулт:” гэсэн форматын дагуу бич. &#34;Хариулт:&#34; гэдгийн араас тооноос өөр юм битгий нэм.
+
+Батад 5 теннисний бөмбөг байв. Тэр теннисний бөмбөгний 2 сав авав. Сав болгон 3 бөмбөгтэй. Тэр нийтдээ хэдэн бөмбөгтэй болсон бэ?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>**Бодолтын алхамууд:**
+1. Батадны эхэнд 5 теннисний бөмбөг байсан.
+2. Тэр 2 сав авсан.
+3. Сав бүрт 3 бөмбөг байлаа.
+4. Нийтдээ авсан бөмбөгний тоо = 2 сав × 3 бөмбөг = 6 бөмбөг.
+
+**Хариулт:**
+6</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 11</p>
+<p>Extracted Answer: 6</p>
+<p>Score: False</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Энэ математикийн бодлогыг бод. Бодолтын алхамуудаа бичээд эцсийн хариултыг хамгийн сүүлийн мөрөнд “Хариулт:” гэсэн форматын дагуу бич. &#34;Хариулт:&#34; гэдгийн араас тооноос өөр юм битгий нэм.
+
+Серверийн өрөөнд есөн компьютер байв. Даваа гарагаас Пүрэв гараг хүртэл өдөр бүр таван компьютер шинээр суулгав. Одоо серверийн өрөөнд хэдэн компьютер байгаа вэ?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Эхлээд өдөрүүдийг тодорхойлоцгооё:
+- Даваа гарагаас Пүрэв гараг хүртэл нийт 4 өдөр байна.
+
+Өдөр бүр суулган компьютерт тооцох:
+- Өдөрт таван компьютер суулгасан тул нийт суусан компьютер: 4 өдөр × 5 компьютер = 20 компьютер.
+
+Эхэнд байсны тоог нэмэх:
+- Эхэнд 9 компьютер байлаа. Тэгэхээр нийт компьютер: 9 + 20 = 29 компьютер.
+
+Хариулт:29</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 29</p>
+<p>Extracted Answer: 29</p>
+<p>Score: True</p>
+    <hr>
+    
+    </body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.4</td>
+    </tr>
+    
+    <tr>
+        <td>mongolian</td>
+        <td>0.4</td>
+    </tr>
+    
+    <tr>
+        <td>mongolian:std</td>
+        <td>0.48989794855663565</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.48989794855663565</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Бүтээврийн нийлцийг зөв холбон бичсэн хэсгийг олоорой.
+Амьтан+ы орогнох оромжийг үүр гэж ерөнхийд нь нэр+л+дэг. Ойд байх олон сая шоргоолж
+зөөлөн шороог бөмбийл+вөл/бөл үүрээ зассаны шинж.
+
+A) Амьтны, нэрлэдэг, бөмбийлвөл
+B) Амьтаны, нэрлэдэг, бөмбийлбөл
+C) Амьтаны, нэрэлдэг, бөмбийлвөл
+D) Амьтны, нэрлэдэг, бөмбийлбөл
+E) Амьтны, нэрэлдэг, бөмбийлбөл</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Дээрх өгүүлбэрт &#34;амьтан&#34; гэдэг нэр үгнээс &#34;амьтны&#34; гэдэг хэлбэрийг авч, &#34;нэрлэдэг&#34; гэдэг үйл үгийн зөв хэлбэрийг сонгох хэрэгтэй. &#34;бөмбийлбөл&#34; гэдэг хэлбэр нь нөхцөлд нийцэж байгаа тул &#34;бөмбийлбөл&#34; гэсэн үг нь зөв.
+
+Тэгэхээр зөв холбосон хэсэг нь:
+- Амьтны (зөв хэлбэр)
+- Нэрлэдэг (зөв хэлбэр)
+- Бөмбийлбөл (зөв хэлбэр)
+
+Иймд зөв хариулт нь D) Амьтны, нэрлэдэг, бөмбийлбөл байна.
+
+Answer: D</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: D</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үгсийг утгаар нь зөв ялган бичсэнийг олоорой.
+
+A) хойд тууль, үлгэр туйл
+B) хойд туйл, үлгэр тууль
+C) хүрзний эш, иш татах
+D) хүрзний иш, иш татах
+E) эш татах, хойд тууль</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Энэхүү асуултад өгөгдсөн үгсийг утгаар нь зөв ялган бичих шаардлагатай. 
+
+A) &#34;хойд тууль, үлгэр туйл&#34; - &#34;тууль&#34; гэдэг нь &#34;туйл&#34; биш, утга нь зөрчилдөж байна.
+B) &#34;хойд туйл, үлгэр тууль&#34; - &#34;туйл&#34; гэдэг нь &#34;тууль&#34; биш, утга нь зөрчилдөж байна.
+C) &#34;хүрзний эш, иш татах&#34; - &#34;эш&#34; гэдэг нь &#34;иш&#34; биш, утга нь зөрчилдөж байна.
+D) &#34;хүрзний иш, иш татах&#34; - &#34;иш&#34; гэдэг нь &#34;иш&#34; тул утга нь зөв.
+E) &#34;эш татах, хойд тууль&#34; - &#34;эш&#34; гэдэг нь &#34;тууль&#34; биш, утга нь зөрчилдөж байна.
+
+Иймд зөв утгаар нь ялгасан хариулт нь D) &#34;хүрзний иш, иш татах&#34; юм.
+
+Answer: D</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: B</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой.
+
+A) данс, хөрөнгө, тэгшитгэл 
+B) рубль, юань, фонд, евро
+C)  бордоо, хөрс, цэвдэг, хлор
+D) мангани, азот, магни, хүхэр
+E) онцолбор, дэвсвэр, урвал</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Энэхүү асуултанд &#34;утгын нэгэн зүйлчлэл&#34; гэдэг нь тодорхой нэг сэдэв, чиглэлд хамрах зүйлсийг тодорхойлохыг шаарддаг. 
+
+А) данс, хөрөнгө, тэгшитгэл - эдийн засгийн болон санхүүгийн ойлголтууд.
+B) рубль, юань, фонд, евро - валютууд болон санхүүгийн хэрэгсэл.
+C) бордоо, хөрс, цэвдэг, хлор - газар тариалан, хөдөө аж ахуйн элементүүд.
+D) мангани, азот, магни, хүхэр - химийн элементүүд.
+E) онцолбор, дэвсвэр, урвал - химийн процессыг илэрхийлж буй ойлголтууд.
+
+Эдгээрээс &#34;утгын нэгэн зүйлчлэл&#34; гэдэг нь химийн элементүүдийг илэрхийлж буй D) мангани, азот, магни, хүхэр хэсэгт хамаарах нь тодорхой байна. Учир нь эдгээр нь бүгд химийн элементүүд бөгөөд нэг төрлийн зүйлчлэлд хамаарах юм.
+
+Тиймээс, зөв хариулт нь D) мангани, азот, магни, хүхэр.
+
+Answer: D</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: D</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Ч.Дагвадорж “Шувуун зэл” шүлгийн
+“Торойх цэг,
+Тодорсоор, бүдгэрсээр, тодорсоор
+Тоонон дээгүүр шувуун зэл
+Ганганасаар, гунганасаар, ганганасаар” хэсэгт айзам хэмнэлийг тааруулахдаа зохиогч
+найруулгын ямар уран хэрэглүүр ашигласан байна вэ?
+
+A) санааг гүнзгийрүүлэн давтсан давталт
+B)  аажмаар өсгөн дүрсэлсэн ахиулал
+C) тэгш хэлбэрээр дүрсэлсэн зэрэгцүүлэл
+D) эсрэг тэсрэгийг сөргөцүүлсэн харшуулал
+E) урнаар анхааруулсан уран анхааруулал</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Шүлгийн энэ хэсэгт айзам хэмнэлийг тааруулахдаа зохиогчийн ашигласан уран хэрэглүүрийг тодорхойлохдоо шүлгийн хэллэг, давталт, дүрслэл зэргийг авч үзэх хэрэгтэй.
+
+&#34;Торойх цэг, Тодорсоор, бүдгэрсээр, тодорсоор&#34; гэдэг хэсэгт &#34;тодорсоор&#34; болон &#34;бүдгэрсээр&#34; гэсэн үгсийн давталт, мөн &#34;ганганасаар, гунганасаар, ганганасаар&#34; гэдэг хэсэгт &#34;ганганасаар&#34; гэсэн үг давтагдаж байна. Энэ нь санааг гүнзгийрүүлэн давтсан давталт гэж үзэж болно.
+
+Иймд, шүлгийн энэ хэсэгт зохиогч давталтыг ашиглан айзам хэмнэлийг тааруулсан байна.
+
+Answer: A</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: B</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Б.Лхагвасүрэн “Тамгагүй төр” жүжгийн дараах хэсгээс дүрийн ямар хэв шинж илэрч байна вэ?
+Эрт гундсан үзэсгэлэн чинь
+Хааны дурыг гутааж
+Элэгнээс чинь унасан үрд чинь
+Хаан болохын заяаг дутаасан
+Хяслын энэ орчлонгоос
+Хариугаа би авна.
+
+A) эзлэн түрэмгийлсэн
+B) дээрэлхэж бардамнасан
+C) өширхөж дайсагнасан
+D) эр чадалдаа эрэмшсэн
+E) басамжлан бардсан</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Энэхүү шүлгийн хэсэгт дүрийн сэтгэл зүй, хандлага тодорхойлогдож байна. Дүр нь хааны засаглал, түүний дураар үйлдэж буй үйлдлийг шүүмжилж, өөрийнхөө хариуг авахыг хүсэж байна. &#34;Хааны дурыг гутааж&#34;, &#34;Хаан болохын заяаг дутаасан&#34; гэсэн мөрүүд нь хаан болон түүний засаглалд хандаж байгаа үзэл бодол, өширхөл, дайсагналын шинжийг илэрхийлж байна. Иймд, энэ дүрийн хэв шинжийг &#34;өширхөж дайсагнасан&#34; гэж тодорхойлох нь зүйтэй.
+
+Тиймээс, зөв хариулт нь C) өширхөж дайсагнасан. 
+
+Answer: C</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: C</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Б.Лхагвасүрэн “Тамгагүй төр” жүжгийн хэсгийг уншаад, дотоод орчноос дүрийн сэтгэл
+хөдлөлийг тодорхойлоорой.
+Хамгийн сүүлчийн удаа
+Хаан гэдгээ мартан өлмийд чинь сөгдье.
+Эцсийн удаа гишгэсэн газрын чинь
+Эсгэсэн шороог би ус шиг залгилъя.
+
+A) сэтгэл нялхарсан
+B) сэтгэл догдолсон
+C) сэтгэл дэнсэлсэн
+D) сэтгэл уярсан
+E) сэтгэл хоргодсон</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Энэхүү хэсэгт дүрийн сэтгэл хөдлөл нь гүн гүнзгий, эмзэг, нялхарсан байдлыг илтгэж байна. &#34;Хаан гэдгээ мартан&#34; гэдэг нь дүрийн сэтгэл хөдлөл нь гунигтай, гашуудсан мэдрэмжийг илэрхийлж байгаа бөгөөд &#34;Эцсийн удаа&#34; гэдэг нь эцсийн мөчид, сэтгэл дотроо гүн гүнзгий хямралтай байгаа гэсэн санааг агуулж байна. Тиймээс, энэ хэсэгт дүрийн сэтгэл хөдлөл нь &#34;сэтгэл нялхарсан&#34; гэж тодорхойлогдох боломжтой.
+
+Answer: A</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: A</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Гадаад үгэнд харьяалахын тийн ялгалын “-ийн, -ын” нөхцөлийг зөв дагуулан бичсэн хэсгийг
+олоорой.
+
+A) клубийн, брокерийн, тактикийн
+B) клубын, брокерын, тактикын
+C) клубийн, брокерын, тактикийн
+D) клубын, брокерийн, тактикын
+E) клубийн, брокерын, тактикын</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Гадаад үгэнд харьяалахын тийн ялгалын “-ийн, -ын” нөхцөлийг зөв дагуулан бичихдээ, тухайн үгийн сүүлд байгаа гийгүүлэгчийн чанараас хамаарч &#34;ийн&#34; эсвэл &#34;ын&#34; гэсэн нөхцлийг хэрэглэнэ. 
+
+1. &#34;клуб&#34; гэдэг үг нь &#34;клубын&#34; гэж хувирдаг. &#34;клуб&#34; нь гадаад үг тул &#34;ын&#34; нөхцлийг хэрэглэнэ.
+2. &#34;брокер&#34; гэдэг үг нь &#34;брокерын&#34; гэж хувирдаг. &#34;брокер&#34; нь гадаад үг тул &#34;ын&#34; нөхцлийг хэрэглэнэ.
+3. &#34;тактик&#34; гэдэг үг нь &#34;тактикийн&#34; гэж хувирдаг. &#34;тактик&#34; нь гадаад үг тул &#34;ийн&#34; нөхцлийг хэрэглэнэ.
+
+Иймд, зөв хослолыг хайвал:
+
+- A) клубийн, брокерийн, тактикийн (буруу, &#34;клуб&#34; нь &#34;клубын&#34; байх ёстой)
+- B) клубын, брокерын, тактикын (буруу, &#34;тактик&#34; нь &#34;тактикийн&#34; байх ёстой)
+- C) клубийн, брокерын, тактикийн (буруу, &#34;клуб&#34; нь &#34;клубын&#34; байх ёстой)
+- D) клубын, брокерийн, тактикын (буруу, &#34;брокер&#34; нь &#34;брокерын&#34; байх ёстой)
+- E) клубийн, брокерын, тактикын (буруу, &#34;клуб&#34; нь &#34;клубын&#34; байх ёстой)
+
+Энд зөв хослол байхгүй байна. Гэвч &#34;клуб&#34; болон &#34;брокер&#34;-ийн хувьд &#34;ын&#34; нөхцлийг, &#34;тактик&#34;-ийн хувьд &#34;ийн&#34; нөхцлийг зөв дагуулсан хэсэг нь E) клубийн, брокерын, тактикын гэж үзвэл &#34;брокер&#34;-ийн хувьд буруу ч &#34;тактик&#34;-ийн хувьд зөв байна.
+
+Иймд, хамгийн ойрхон хариулт бол E) клубийн, брокерын, тактикын байна. 
+
+Answer: E</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: E</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой.
+
+A) хромосом, ген, эс, бөөм
+B) доллар, иен, бонд, фунт
+C) хурд, хүч, чадал, магадлал
+D) арилжаа, нийлүүлэлт, үүсвэр
+E) орлуулал, цээрлэл, нэгдэл</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Энэхүү асуултад хамаарах зүйлчлэлийг олохын тулд бид сонголтуудыг нарийвчлан авч үзье.
+
+A) Хромосом, ген, эс, бөөм - эдгээр нь биологийн элементүүд бөгөөд генетикийн бүтэцтэй холбоотой. 
+B) Доллар, иен, бонд, фунт - эдгээр нь валют, санхүүгийн хэрэгслүүдтэй холбоотой.
+C) Хурд, хүч, чадал, магадлал - эдгээр нь физик болон математик шинж чанаруудтай холбоотой.
+D) Арилжаа, нийлүүлэлт, үүсвэр - эдгээр нь эдийн засгийн ойлголтууд бөгөөд худалдаа, зах зээлтэй холбоотой.
+E) Орлуулал, цээрлэл, нэгдэл - эдгээр нь нийгмийн болон сэтгэлзүйн ойлголтуудтай холбоотой.
+
+Эдгээр сонголтууд дотроос A сонголт нь генетикийн элементүүдийг нэгтгэсэн, B нь санхүүгийн хэрэгслүүдийг, C нь физик шинж чанаруудыг, D нь эдийн засгийн ойлголтуудыг, E нь нийгмийн ойлголтуудыг илэрхийлж байна.
+
+Эдгээрээс хамгийн тодорхой нэг зүйлчлэлд хамаарах хэсэг бол D) арилжаа, нийлүүлэлт, үүсвэр, учир нь эдгээр нь эдийн засгийн системийн үндсэн элементүүдийг илэрхийлж байна.
+
+Тиймээс, зөв хариулт бол D.
+
+Answer: D</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Б.Лхагвасүрэн “Тамгагүй төр” жүжгийн дараах хэсгүүдийн аль нь хаан төр ариун байх ёстойг
+харуулж байна вэ?
+
+A) Хүннү төрийн тамгыг барих
+Хүнгүй болчихоор нь
+Хоёр сүүн уулын цаана
+Хорин улаан горхины газар булчихсан.
+B)  Эгэрэг өрлөг надад хэлэхдээ
+Эцгийгээ үхэхээр чи
+Эхтэйгээ гэрлэнэ гэж хэлсэн
+Эрхэт төрийн ёс тийм гэсэн.
+C) Арав алхахад найм нь алдаа
+Адасга мэт араншинтай
+Хүний нүд жавраар хайрсан
+Хүүтэй юм байна, чи бид хоёр.
+D) Тэнгэрийн дор нэг л хаан
+Өөрийнхөө он цагийг элээж
+Өнгөрсөн хойно нь их орыг
+Өөр нэгэн нэхдэг нь учиртай.
+E)  Та бид хоёр үг таргалуулж суугаад яах вэ
+Тамгаа өгчих
+Сэтгэлээ барихыг хүсье
+Сэнтийг чинь бол бөгс минь олоод суучихна.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>To determine which part of Б.Лхагвасүрэн&#39;s play &#34;Тамгагүй төр&#34; illustrates that the royal lineage must be pure, we need to analyze the options provided.
+
+A) This option discusses the significance of the Hunnu state seal and its burial, but it doesn&#39;t explicitly mention the purity of the royal lineage.
+
+B) This option mentions a conversation about a son marrying after his father&#39;s death, implying a certain expectation of behavior and lineage, suggesting a connection to royal purity.
+
+C) This option seems to reflect on mistakes and human flaws, not directly addressing the concept of royal purity.
+
+D) This option speaks about a single king under the sky and the importance of lineage across time, hinting at the necessity of a rightful heir, which relates to the purity of the royal line.
+
+E) This option is more about a conversation that seems to trivialize power and doesn&#39;t focus on the importance of royal lineage.
+
+Considering the focus on the purity of the royal lineage, options B and D are the strongest candidates. However, option D emphasizes the singularity of kingship and the historical significance of lineage, making it a more powerful statement about the necessity of purity in royal bloodlines.
+
+Thus, the most fitting answer is:
+
+Answer: D</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Дараах үгсээс аль нь нутгийн аялгууны үг вэ?
+
+A) зайран
+B) богц
+C) жас
+D) боохой
+E) гос</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Нутгийн аялгууны үгс нь тухайн бүсийн онцлог, соёл, хэлний онцлогийг илэрхийлдэг. 
+
+- A) &#34;зайран&#34; гэдэг нь ихэвчлэн стандарт монгол хэлэнд хэрэглэгддэг үг.
+- B) &#34;богц&#34; гэдэг нь мөн стандарт хэлэнд хэрэглэгддэг, гэхдээ зарим нутгаар онцгой утгатай байж болох юм.
+- C) &#34;жас&#34; гэдэг нь нутгийн аялгууны үг болж болох бөгөөд зарим газарт тодорхой утга илэрхийлдэг.
+- D) &#34;боохой&#34; гэдэг нь ихэнхдээ стандарт хэлэнд хэрэглэгддэг.
+- E) &#34;гос&#34; гэдэг нь тухайн нутгийн аялгууны үг байж болох бөгөөд зарим газарт онцгой утга илэрхийлнэ.
+
+Эдгээрээс &#34;жас&#34; нь нутгийн аялгууны үг гэж үзэгдэж байна. 
+
+Тиймээс, миний хариулт:
+
+Answer: C</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    </body>
+</html>

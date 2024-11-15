@@ -79,16 +79,20 @@ subject2category = {
     "us_foreign_policy": "social_sciences",
     "virology": "other",
     "world_religions": "humanities",
+    "mongolian": "mongolian"
 }
 
 
 class MMLUEval(Eval):
     def __init__(self, num_examples: int | None = None, language: str = "EN-US"):
-        if language != "EN-US":
+        if language == "MN-MN":
+            url = "monmmlu/mmlu_MN-MN.csv"
+        elif language != "EN-US":
             url = f"https://openaipublic.blob.core.windows.net/simple-evals/mmlu_{language}.csv"
         else:
             url = "https://openaipublic.blob.core.windows.net/simple-evals/mmlu.csv"
-        df = pandas.read_csv(bf.BlobFile(url))
+        print(f"URL is now {url}")
+        df = pandas.read_csv(url)
         examples = [row.to_dict() for _, row in df.iterrows()]
         if num_examples:
             examples = random.Random(0).sample(examples, num_examples)
