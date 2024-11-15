@@ -9,20 +9,8 @@ from tqdm import tqdm
 
 from .types import EvalResult, Message, SamplerBase, SingleEvalResult
 
-QUERY_TEMPLATE_MULTICHOICE = """
-Answer the following multiple choice question. The last line of your response should be of the following format: 'Answer: $LETTER' (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
-
-{Question}
-
-A) {A}
-B) {B}
-C) {C}
-D) {D}
-E) {E}
-""".strip()
-
 # QUERY_TEMPLATE_MULTICHOICE = """
-# Дараах нэг сонголттой асуултанд хариул. Хариултын сүүлийн мөр дараах хэлбэртэй байх ёстой: ‘Хариулт: $ҮСЭГ’ (ишлэлгүйгээр), энд ҮСЭГ нь A, B, C, D, E-ийн аль нэг нь байна. Хариулахдаа алхам алхмаар тунгаан бодоорой.
+# Answer the following multiple choice question. The last line of your response should be of the following format: 'Answer: $LETTER' (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
 
 # {Question}
 
@@ -32,6 +20,18 @@ E) {E}
 # D) {D}
 # E) {E}
 # """.strip()
+
+QUERY_TEMPLATE_MULTICHOICE = """
+Дараах нэг сонголттой асуултанд хариул. Хариултын сүүлийн мөр дараах хэлбэртэй байх ёстой: ‘Хариулт: $ҮСЭГ’ (ишлэлгүйгээр), энд ҮСЭГ нь A, B, C, D, E-ийн аль нэг нь байна. Хариулахдаа алхам алхмаар тунгаан бодоорой.
+
+{Question}
+
+A) {A}
+B) {B}
+C) {C}
+D) {D}
+E) {E}
+""".strip()
 
 ANSWER_PATTERN_MULTICHOICE = r"(?i)Answer\s*:\s*([A-E])"
 ANSWER_PATTERN = r"(?i)Answer\s*:\s*([^\n]+)"

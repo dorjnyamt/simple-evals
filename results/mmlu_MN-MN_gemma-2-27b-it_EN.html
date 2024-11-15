@@ -1,0 +1,2767 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.234</td>
+    </tr>
+    
+    <tr>
+        <td>mongolian</td>
+        <td>0.23404255319148937</td>
+    </tr>
+    
+    <tr>
+        <td>mongolian:std</td>
+        <td>0.42339890940707225</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.42339890940707225</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Бүгд дүрслэх язгуураас бүтсэн хэсгийг олоорой.
+
+A) сарвалзах, сунгах, лугших 
+B) хагалах, цоолох, бэртэх
+C) бархирах, шаржигнах, бяцлах
+D) сарталзах, цөмлөх, бувтнах
+E) сагсалзах, угзрах, годгонох</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Бүгд дүрслэх язгуур means &#34;the root that describes all&#34;. This implies we are looking for a set of words that share a common root.
+* хэсгийг олоорой means &#34;find the section&#34;. This means we need to identify the group of words that belong together.
+
+Now, let&#39;s look at the options:
+
+* A) сарвалзах, сунгах, лугших: These verbs all relate to actions involving pulling or dragging something.
+* B) хагалах, цоолох, бэртэх: These verbs relate to actions involving breaking or splitting something.
+* C) бархирах, шаржигнах, бяцлах: These verbs relate to actions involving hitting or striking something.
+* D) сарталзах, цөмлөх, бувтнах: These verbs relate to actions involving squeezing or pressing something.
+* E) сагсалзах, угзрах, годгонох: These verbs relate to actions involving moving or rotating something.
+
+Considering the common root and meaning, the most appropriate answer is:
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Цэгийн оронд тохирохыг сонгоно уу. Эш татсан зүйлд энд тэндээс орхисон бол тэрхүү орхисон газарт ..................... тавина.
+
+A) цуваа цэг (…) 
+B) богино зураас (-) 
+C) цэгтэй таслал (;)
+D) давхар цэг (:) 
+E) таслалтай зураас (,-)</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Here&#39;s how to break down the question:
+
+* Translation: The question asks you to choose the punctuation mark that fits in the blank. If you omit something from a sentence, you should put ... in the place where it was omitted.
+
+* Options:
+
+    * A) Ellipsis (...) - used to indicate omitted words or a pause.
+    * B) Hyphen (-) - used to connect words or syllables.
+    * C) Semicolon (;) - used to connect two related independent clauses.
+    * D) Colon (:) - used to introduce a list or explanation.
+    * E) Dash (,-) - used to set off parenthetical information.
+
+* Correct Answer: The ellipsis (...) is used to show where something has been left out.
+
+
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: A</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой.
+
+A) данс, хөрөнгө, тэгшитгэл 
+B) рубль, юань, фонд, евро
+C)  бордоо, хөрс, цэвдэг, хлор
+D) мангани, азот, магни, хүхэр
+E) онцолбор, дэвсвэр, урвал</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой. translates to &#34;Find the part that belongs to a certain category.&#34;
+
+Now let&#39;s look at the options:
+
+* A) данс, хөрөнгө, тэгшитгэл (accounts, finances, equation) - This seems related to mathematics or finance.
+* B) рубль, юань, фонд, евро (ruble, yuan, fund, euro) - These are all types of currency or financial units.
+* C)  бордоо, хөрс, цэвдэг, хлор (bordeaux, soil, fertilizer, chlorine) - These seem related to agriculture or chemistry.
+* D) мангани, азот, магни, хүхэр (manganese, nitrogen, magnet, iron) - These are elements or materials.
+* E) онцолбор, дэвсвэр, урвал (destruction, disaster, damage) - These are related to negative events.
+
+The question asks for a category, and option B clearly represents a category of financial terms. 
+
+Answer: B
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: B</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Төрөл үгээс бүрдсэн хэсгийг олоорой.
+
+A) амлалт, амбан, амсар, амгай
+B) ургамал, ургац, ургалт, ураглах
+C) сэрэмж, сэргэлэн, сэргэлт, сэргэг
+D) бодлого, бодолт, бодгаль, бодит
+E) будан, будаг, будалт, будаа</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Төрөл үгээс бүрдсэн хэсгийг олоорой. This translates to &#34;Find the section consisting of words of the same root.&#34;
+
+Now, let&#39;s examine each option:
+
+* A) амлалт, амбан, амсар, амгай - These words share the root &#34;ам&#34; but have different meanings.
+* B) ургамал, ургац, ургалт, ураглах - These words share the root &#34;урга&#34; and are related to the concept of growing.
+* C) сэрэмж, сэргэлэн, сэргэлт, сэргэг - These words share the root &#34;сэрг&#34; and are related to the concept of revival or restoration.
+* D) бодлого, бодолт, бодгаль, бодит - These words share the root &#34;бод&#34; but have different meanings.
+* E) будан, будаг, будалт, будаа - These words share the root &#34;буд&#34; but have different meanings.
+
+Therefore, the correct answer is:
+
+Answer: B
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: B</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үгийн сангийн онцлогоороо ялгаатай нь аль вэ?
+
+A) өртөө, улаа, алба, ажил, манз 
+B) намбух, улаач, шууданч, их хурал
+C) хэвтүүл, цэрэг, чийчаан, сүрчиг 
+D) нэгдэл, илгээлт, оточ, эмнэлэг
+E) алба гувчуур, оорцог, их хуралдай</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Үгийн сангийн онцлогоороо ялгаатай нь аль вэ? This translates to &#34;Which one is different in terms of vocabulary?&#34;
+
+* We need to identify the group of words that doesn&#39;t share a common theme or category.
+
+Let&#39;s analyze each option:
+
+* A) өртөө, улаа, алба, ажил, манз: These words relate to concepts like cost, salary, job, and position.
+* B) намбух, улаач, шууданч, их хурал: These words relate to political positions and assemblies.
+* C) хэвтүүл, цэрэг, чийчаан, сүрчиг: These words relate to military and weaponry.
+* D) нэгдэл, илгээлт, оточ, эмнэлэг: These words relate to institutions and organizations.
+* E) алба гувчуур, оорцог, их хуралдай: These words relate to roles and titles within organizations or political systems.
+
+Looking at the options, C) хэвтүүл, цэрэг, чийчаан, сүрчиг stands out as the group of words that doesn&#39;t fit a clear thematic category like the others.
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Дараах үгсээс аль нь нутгийн аялгууны үг вэ?
+
+A) хайрхан
+B) бортого
+C) хөхөл
+D) сийдэм
+E) улаач</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Here&#39;s how to break down the question:
+
+* &#34;Нутгийн аялгууны үг&#34; means &#34;a word belonging to the noun&#39;s declension&#34;.  
+* Noun declensions in Mongolian grammar refer to how nouns change form depending on their role in a sentence (subject, object, etc.).
+
+Now let&#39;s look at the options:
+
+* A) хайрхан: This is a noun (mountain).
+* B) бортого: This is a noun (a type of food).
+* C) хөхөл: This is a noun (a type of bird).
+* D) сийдэм: This is an adjective (beautiful).
+* E) улаач: This is a noun (archer).
+
+Since we&#39;re looking for a noun that demonstrates declension, the correct answer is any of the nouns listed.
+
+Answer: E 
+
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: E</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Хоёр гишүүнт бүтэцтэй холбоо үгийг олоорой.
+
+A) Аавын бийд хүнтэй танилцах
+B) Хүнд хүчрийг даван туулах
+C) Эзэн хичээвэл заяа хичээх 
+D) Үлгэр түүхийг анхааралтай унших
+E) Эмчийн заавраар эм уух</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s analyze each option:
+
+* A) Аавын бийд хүнтэй танилцах: This phrase describes a situation, not a two-member structure.
+* B) Хүнд хүчрийг даван туулах: This phrase also describes an action, not a two-member structure.
+* C) Эзэн хичээвэл заяа хичээх: This phrase shows a conditional relationship (&#34;if the master studies, the student studies&#34;), which can be considered a two-member structure.
+* D) Үлгэр түүхийг анхааралтай унших: This phrase describes an action, not a two-member structure.
+* E) Эмчийн заавраар эм уух: This phrase describes an action following a command, not a two-member structure.
+
+Therefore, the correct answer is C.
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: B</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Бүтээврийн нийлцийг зөв холбон бичсэн хэсгийг олоорой. Ишиг тургил+бал/вал тэнгэр муухайрна гэж эмээ өгүүлнэ. Өвөө маань эргэн тойрон+ыг
+дурандана. Цай даргитал буц+л+ж байхад айлчин ирсэнд ээж баярлана.
+
+A) тургилбал, тойроныг, буцлаж
+B) тургилвал, тойрныг, буцалж
+C) тургилбал, тойрныг, буцалж
+D) тургилвал, тойроныг, буцлаж
+E) тургилбал, тойрныг, буцлаж</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the sentence and analyze the word combinations:
+
+* Ишиг тургил+бал/вал тэнгэр муухайрна - This part suggests a conditional statement. &#34;Тургилбал&#34; (if it gets clear) or &#34;тургилвал&#34; (if it clears) makes sense grammatically.
+
+* Өвөө маань эргэн тойрон+ыг дурандана. -  &#34;Тойрон&#34; means &#34;around&#34; and &#34;ыг&#34; is the object marker. So, &#34;тойроныг&#34; (around it) is the correct combination.
+
+* Цай даргитал буц+л+ж байхад айлчин ирсэнд ээж баярлана. - &#34;Буцлаж&#34; (falling down) is the appropriate verb form in this context.
+
+Considering the grammar and context, the correct answer is:
+
+Answer: D 
+
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Гадаад үгэнд харьяалахын тийн ялгалын “-ийн, -ын” нөхцөлийг зөв дагуулан бичсэн хэсгийг
+олоорой.
+
+A) анкетийн, курсийн, математикын
+B) анкетын, курсын, математикын
+C) анкетийн, курсын, математикийн
+D) анкетын, курсийн, математикийн
+E) анкетын, курсийн, математикын</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* It asks for the correct use of the possessive suffix &#34;-ийн, -ын&#34; with certain words.
+* The words are &#34;анкетийн/анкетын&#34;, &#34;курсийн/курсын&#34;, and &#34;математикын/математикийн&#34;.
+
+Now, let&#39;s recall the rules:
+
+*  &#34;-ийн&#34; is used after words ending in a vowel.
+* &#34;-ын&#34; is used after words ending in a consonant.
+
+Applying these rules:
+
+* &#34;анкетийн&#34; is correct because &#34;анкет&#34; ends in a vowel.
+* &#34;курсын&#34; is correct because &#34;курс&#34; ends in a consonant.
+* &#34;математикийн&#34; is correct because &#34;математик&#34; ends in a consonant.
+
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үгсийг утгаар нь зөв ялган бичсэнийг олоорой.
+
+A) байцай тарих, гарын сайр
+B) голын саарь, гарын сайр
+C) байцаа тарих, асуун байцаах
+D) байцай тарих, асуун байцайх
+E) голын сайр, гарын саарь</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the Mongolian words:
+
+* Үгсийг: This means &#34;words&#34;.
+* утгаар: This means &#34;by meaning&#34;.
+* зөв ялган бичсэнийг: This means &#34;correctly matched&#34;.
+* олоорой: This means &#34;find&#34;.
+
+The question asks us to find the pair of words that are correctly matched by meaning.
+
+Let&#39;s analyze the options:
+
+* A) байцай тарих, гарын сайр:  &#34;байцай тарих&#34; means &#34;to weave a basket&#34;, and &#34;гарын сайр&#34; means &#34;to mend something with one&#39;s hand&#34;. These are related to crafts but not direct synonyms.
+* B) голын саарь, гарын сайр: &#34;голын саарь&#34; means &#34;riverbank&#34;, and &#34;гарын сайр&#34; means &#34;to mend something with one&#39;s hand&#34;. These are unrelated.
+* C) байцаа тарих, асуун байцаах: &#34;байцаа тарих&#34; means &#34;to weave a basket&#34;, and &#34;асуун байцаах&#34; means &#34;to ask a question&#34;. These are unrelated.
+* D) байцай тарих, асуун байцайх: &#34;байцай тарих&#34; means &#34;to weave a basket&#34;, and &#34;асуун байцайх&#34; means &#34;to ask a question&#34;. These are unrelated.
+* E) голын сайр, гарын саарь: &#34;голын сайр&#34; means &#34;riverbank&#34;, and &#34;гарын саарь&#34; means &#34;to mend something with one&#39;s hand&#34;. These are unrelated.
+
+None of the options have words that are direct synonyms.  
+
+
+Answer: None of the above
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: None</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Д.Цэдэв “Улаан хамбан зодогт буюу тавын даваа” туужийн дараах хэсгүүдийн аль нь
+нийгмийн хам сэдвийг илтгэх вэ?
+
+A) 1821 оны үеэс Дорнодын талд нар, салхи амсан байж, чийрэг боргил өссөн Хүдэр гэдэг
+хүү айл айлд ачаа тээшний хүндийг өргөн зарцлагдаж явсан юм гэнэ билээ.
+B) Наадмын талбайн баруун зүүн жигүүрт эрээлэн ханхайх монгол үндэсний угалз
+мэтгэсэн асрууд харагдана.
+C) Улс даяар «Босоо» гэж алдаршсан суут бөхийн хоч чимгийг барилдахын өмнө
+дуулаагүй нь яамай.
+D) Энэ чинь хуучин Сайн ноён ханы Насан арслантай гараа дэвээ нь яасан адилхан юм
+бэ! гэж нүдэндээ итгэж ядсан нэгэн өвгөн өгүүлнэ.
+E) Зуны зоосон шар наран Сонгино хайрханы цаагуур далд орох завдан, наадмын
+талбайд энэ өдрийн сүүлчийн гэрлээ харамгүй цацрааж байв.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Here&#39;s the breakdown of why the answer is D:
+
+* A: Describes a historical event (weather and a man&#39;s journey) without social commentary.
+* B:  Paints a picture of the naadam festival but doesn&#39;t delve into social implications.
+* C: Focuses on a specific event (a wrestler&#39;s silence) without broader societal context.
+* D: Directly compares the current situation to a past event involving a powerful figure (Sain Noyon Khan), implying a commentary on power dynamics or historical parallels within society.
+* E:  Describes the setting (sun, crowd) without social commentary.
+
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Д.Цэдэв “Улаан хамбан зодогт буюу тавын даваа” туужийн доорх нөхцөл байдлаас Насангийн туулж өнгөрүүлсэн амьдралыг хэрхэн дүгнэж болох вэ?
+Насан хонин сүргээ гэрийнхээ гадаа
+тоос татуулан хөөж очоод айх, гайхах
+зэрэгцэн зогссон ээждээ «Би бөхчүүл
+дагаж наадамд явлаа!» гэж хариу
+хүлээх байдалгүй угсруулан хэлээд
+саяын хөсгийн хойноос зам хөөж,
+наадамчдыг даваан дээр гарахын үес
+гүйцжээ. Зориг хүсэл, итгэл тэмүүллийн далбаа нь огтхон ч гудайгаагүй, далан насныхаа
+давааг давж яваа өвгөн бүргэд Насан
+арслан олон онд барилдаж, газар газрын
+хүчтэнийг орхиж омог хав, жаргал
+баяслаа хувааж явсан их наадмынхаа
+талбай дундуур хүчит хоёр гар даль
+жигүүрээ дэлэн дэлсээр л байж билээ.
+
+A) Хүсэл тэмүүлэлтэй амьдарсныг
+B) Хүчит арслан болж, он он барилдсаныг
+C) Жирийн хоньчин хүүгээс хүчит арслан болсныг
+D) Аливаад бууж өгөлгүй, сөрөн тэмцэж ирснийг
+E) Шантарч мятаршгүй амьдарсныг</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage describes Nasang&#39;s life as a wrestler, highlighting his determination, perseverance, and achievements.
+
+* A) Хүсэл тэмүүлэлтэй амьдарсныг: While Nasang is driven by ambition, the passage focuses more on his actions and accomplishments than simply his desire.
+
+* B) Хүчит арслан болж, он он барилдсаныг: This is a central theme of the passage, emphasizing Nasang&#39;s transformation into a powerful wrestler.
+
+* C) Жирийн хоньчин хүүгээс хүчит арслан болсныг: The passage does show this transformation, but it&#39;s not the sole focus.
+
+* D) Аливаад бууж өгөлгүй, сөрөн тэмцэж ирснийг: This is also true, but the passage emphasizes more than just his resilience.
+
+* E) Шантарч мятаршгүй амьдарсныг: While Nasang&#39;s life is full of challenges, the passage celebrates his triumphs.
+
+Answer: B
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: B</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Д.Цэдэв “Улаан хамбан зодогт буюу тавын даваа” туужаас үндэсний ижилсэл буюу монгол
+хүний зан заншил, сэтгэл зүйн өвөрмөц онцлогийг илэрхийлсэн хэсгийг олоорой.
+
+A) “Бид орон гэрээ сахина. Та нар зорьсон хэргээ сэтгэлчлэн бүтээгээд ирээрэй” гэж аав
+нь хэлэв.
+B) Он цагийн урсгал дунд чи минь, одоо хаана ч алга! Гэвч чи минь сэтгэлээр гутахгүй
+тэмцэн хатуужихын ид шидийг наддаа заяажээ.
+C) Аян жин хийнэ гэдэг чинь мөнгө олж, баяжихын нэр юм уу? Мөн ч нялхаараа байна
+даа, та нар! гэж сургамжилжээ.
+D) Дийлэгдэшгүй их хүчтэй байг гэж ар зоо далбаанд нь бар, арсланг ноцолдууланхан
+барилдууланхан шаглав.
+E) Хэнтийн их хөвч дундуур нэвт гарсан замаар үдшийн бүрэнхийгээр шогшуулж явна.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question. We need to find the part of the excerpt that best exemplifies Mongolian cultural identity or unique characteristics.
+
+* A: This focuses on family and responsibility, common themes but not uniquely Mongolian.
+* B: This speaks to perseverance and overcoming challenges, also universal themes.
+* C: This criticizes materialism, a potentially relevant cultural commentary, but not strongly indicative of a unique Mongolian trait.
+* D: This describes a powerful, perhaps even fierce, determination. This aligns with historical Mongolian characteristics of strength and resilience. 
+* E: This is purely descriptive of a setting and doesn&#39;t offer insight into cultural identity.
+
+D seems to be the strongest contender as it reflects a potential aspect of Mongolian cultural identity.
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: D</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Д.Нацагдорж “Учиртай гурван толгой” жүжгийн дараах хэсгүүдийн аль нь дарлагдагч ангийн
+тэмцлийг харуулж байна вэ?
+
+A) Гэртээ хариад яах вэ дээ?
+Хэнийг гэж очих буй даа?
+Харгис Балган дор баригдсанаас
+Хээр үхсэн нь дээр дээ.
+B) Эд хөрөнгө ч элбэг бий
+Эхнэр авахыг эрсэн юм
+Эеэр эс болбоос
+Эзний зарлиг дор хүргэнэ!
+C) Хүний арьсыг нөмөрсөн
+Хээрийн галзуу чоно чи
+Хүзүү толгой үргэлж байхад
+Чи намайг боолчлох үгүй.
+D) Гаргаж өгсөн өдрөөс чинь
+Харгис хүн тохиолдлоо
+Гартаа оруулж авах гэхэд нь
+Ганцхан чамайг харуулдлаа.
+E) Хоёр бие учирлаа даа!
+Хойчийн зовлон гайгүй биз дээ
+Элдэв дарлах гэвэл дээ
+Эр чадлаар тэмцэнэ.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The correct answer focuses on the struggle of the oppressed class. Let&#39;s analyze each option:
+
+* A) This focuses on the aftermath of the protagonist&#39;s imprisonment and doesn&#39;t directly address class struggle.
+* B) This highlights the desire for wealth and marriage, not the plight of the oppressed.
+* C) This criticizes a specific individual, not the broader system of oppression.
+* D) This depicts the protagonist being oppressed and exploited, highlighting the struggle of the working class.
+* E) This focuses on overcoming challenges through strength, but doesn&#39;t specifically address class conflict.
+
+Therefore, the most suitable answer is D.
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Д.Нацагдорж “Учиртай гурван толгой” жүжгийн хэсгийг уншаад, дотоод орчноос дүрийн сэтгэл
+хөдлөлийг тодорхойлоорой.
+Галуу шувуу хүртэл
+Ганганаж гунганаад буцаж байна
+Хайртай амраг Юндэн минь
+Харьж ирэх үгүй яав.
+
+A) сэтгэл догдолсон
+B) сэтгэл гуньсан
+C) сэтгэлээр унасан
+D) сэтгэл сэмэрсэн
+E)  сэтгэл хоргодсон</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s analyze the provided excerpt from &#34;Учиртай гурван толгой&#34;:
+
+* &#34;Ганганаж гунганаад буцаж байна&#34;: This line suggests a sense of weariness and resignation.
+
+* &#34;Хайртай амраг Юндэн минь Харьж ирэх үгүй яав&#34;: The speaker is lamenting the absence of someone dear (&#34;Хайртай амраг Юндэн&#34;), implying a feeling of loss and longing.
+
+Considering these points, the most appropriate description of the character&#39;s emotional state would be sorrowful.
+
+Out of the given options, &#34;сэтгэл догдолсон&#34; (heartfelt sadness) best captures this sentiment. 
+
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: B</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Д.Нацагдорж “Учиртай гурван толгой” жүжгийн дараах хэсгээс дүрийн ямар хэв шинж илэрч байна вэ?
+Хас чулууны өнгийг
+Харлуулж юу ч чадах үгүй
+Хайртай амраг хүнийг
+Хагацуулж хэн ч дийлэх үгүй.
+
+A) итгэлтэй найдвартай
+B) шударга журамтай
+C) үнэнч зоримог
+D) эрэмгий түрэмгий
+E) хичээнгүй дайчин</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The excerpt talks about the inability to change the color of a rock, the fate of a person, and the impossibility of stopping someone from being happy. This suggests a sense of powerlessness and inevitability.
+
+Looking at the options, the best fit for this feeling is:
+
+D) эрэмгий түрэмгий (powerful and cruel)
+
+This option implies a force that is beyond control and imposes its will regardless of consequences.
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Ч.Дагвадорж “Шувуун зэл” шүлгийн
+“Торойх цэг,
+Тодорсоор, бүдгэрсээр, тодорсоор
+Тоонон дээгүүр шувуун зэл
+Ганганасаар, гунганасаар, ганганасаар” хэсэгт айзам хэмнэлийг тааруулахдаа зохиогч
+найруулгын ямар уран хэрэглүүр ашигласан байна вэ?
+
+A) санааг гүнзгийрүүлэн давтсан давталт
+B)  аажмаар өсгөн дүрсэлсэн ахиулал
+C) тэгш хэлбэрээр дүрсэлсэн зэрэгцүүлэл
+D) эсрэг тэсрэгийг сөргөцүүлсэн харшуулал
+E) урнаар анхааруулсан уран анхааруулал</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the options and see which one fits the given excerpt from Ch.Dagvadorj&#39;s poem &#34;Shuuvun Zel&#34;:
+
+* A) санааг гүнзгийрүүлэн давтсан давталт (Repetition to deepen the idea):  The excerpt does repeat words like &#34;todorsoor&#34; and &#34;ganaganasar&#34;, but the repetition seems to build momentum and imagery rather than deepening a single idea.
+
+* B)  аажмаар өсгөн дүрсэлсэн ахиулал (Gradation to enhance the image): The excerpt does use a gradual build-up of intensity with the repetition and the imagery of the bird soaring. This seems like a strong possibility.
+
+* C) тэгш хэлбэрээр дүрсэлсэн зэрэгцүүлэл (Parallelism to create balance): There isn&#39;t a clear parallel structure in the excerpt.
+
+* D) эсрэг тэсрэгийг сөргөцүүлсэн харшуулал (Antithesis to create contrast): There isn&#39;t a clear contrast or opposition presented in the excerpt.
+
+* E) урнаар анхааруулсан уран анхааруулал (Artistic emphasis to draw attention): While the repetition does draw attention, the primary effect seems to be the building of intensity.
+
+
+Considering the analysis, the most fitting answer is:
+
+Answer: B
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: B</p>
+<p>Extracted Answer: B</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Бүгд дүрслэх язгуураас бүтсэн хэсгийг олоорой.
+
+A) сортолзох, нүдлэх, дангинах 
+B) хугалах, цоорох, гэмтэх
+C) хархирах, харжигнах, няцлах
+D) гэдийх, сийчих, мэлтийх
+E) арзайх, шоржигнох, түгших</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s analyze each option:
+
+* A) сортолзох, нүдлэх, дангинах: These verbs describe actions related to physical appearance or state.
+* B) хугалах, цоорох, гэмтэх: These verbs describe actions that result in damage or deterioration.
+* C) хархирах, харжигнах, няцлах: These verbs describe actions related to feeling uncomfortable or experiencing difficulty.
+* D) гэдийх, сийчих, мэлтийх: These verbs describe actions related to expressing emotions or opinions.
+* E) арзайх, шоржигнох, түгших: These verbs describe actions related to making a loud, unpleasant sound.
+
+The question asks for a group of words that are all derived from the same root.  Looking at the options, E) арзайх, шоржигнох, түгших all share a common root related to sound.
+
+
+Answer: E
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: E</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Цэгийн оронд тохирохыг сонгоно уу.
+Өгүүлэгчийн сандарсан, түгдэрсэн байдлыг илэрхийлэхдээ ..................... тавина.
+
+A)  таслалтай зураас (,-)
+B) богино зураас (-)
+C) цэгтэй таслал (;)
+D) давхар цэг (:) 
+E) цуваа цэг (…)</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* &#34;Цэгийн оронд тохирохыг сонгоно уу.&#34; This means &#34;Choose the one that fits in the blank.&#34;
+* &#34;Өгүүлэгчийн сандарсан, түгдэрсэн байдлыг илэрхийлэхдээ ..................... тавина.&#34; This means &#34;When expressing the hesitant, stuttering state of the speaker, you use...&#34;
+
+Considering the context, we need a punctuation mark that conveys hesitation or a break in speech.
+
+* A) таслалтай зураас (,-)  This is a comma and hyphen, used for compound adjectives or parenthetical phrases.
+* B) богино зураас (-) This is a hyphen, used for compound words or to indicate a range.
+* C) цэгтэй таслал (;) This is a semicolon, used to separate independent clauses.
+* D) давхар цэг (:) This is a colon, used to introduce a list or explanation.
+* E) цуваа цэг (…) This is an ellipsis, used to indicate a pause, omission, or trailing off.
+
+The ellipsis (E) best represents hesitation or a stuttering speech pattern.
+
+Answer: E
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: E</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой.
+
+A) хромосом, ген, эс, бөөм
+B) доллар, иен, бонд, фунт
+C) хурд, хүч, чадал, магадлал
+D) арилжаа, нийлүүлэлт, үүсвэр
+E) орлуулал, цээрлэл, нэгдэл</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* &#34;Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой&#34; translates to &#34;Find the part that belongs to one classification of biology.&#34;
+
+* This means we need to identify the group of words that are related to a biological concept.
+
+Let&#39;s analyze the options:
+
+* A)  хромосом, ген, эс, бөөм (chromosome, gene, cell, germ) - These are all biological terms.
+
+* B) доллар, иен, бонд, фунт (dollar, yen, bond, pound) - These are currencies.
+
+* C) хурд, хүч, чадал, магадлал (speed, force, ability, probability) - These are physical concepts.
+
+* D) арилжаа, нийлүүлэлт, үүсвэр (trade, supply, source) - These are economic terms.
+
+* E) орлуулал, цээрлэл, нэгдэл (investment, destruction, merger) - These are business terms.
+
+
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: A</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Төрөл үгээс бүрдсэн хэсгийг олоорой.
+
+A) эрчим, эрэлхэг, эрэгчин, эрэл
+B) үзвэр, үзэмж, үзүүр, үзлэг
+C) ухаан, ухааж, ухаарал, ухвар
+D) зорц, зоргол, зорогч, зоруул
+E) зогсоо, зогсоц, зогьсолт</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Төрөл үгээс бүрдсэн хэсгийг олоорой. This translates to &#34;Find the section consisting of words of the same part of speech.&#34;
+
+Now, let&#39;s analyze each option:
+
+* A) эрчим, эрэлхэг, эрэгчин, эрэл - These words are all adjectives (describing words).
+* B) үзвэр, үзэмж, үзүүр, үзлэг - These words are nouns (naming words).
+* C) ухаан, ухааж, ухаарал, ухвар - This group mixes nouns (ухаан, ухаарал), a verb (ухааж), and a noun/adjective (ухвар).
+* D) зорц, зоргол, зорогч, зоруул - This group mixes adjectives (зорц, зоргол), a noun (зорогч), and a verb (зоруул).
+* E) зогсоо, зогсоц, зогьсолт - This group mixes a verb (зогсоо), a noun (зогсоц), and an adjective (зогьсолт).
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үгийн сангийн онцлогоороо ялгаатай нь аль вэ?
+
+A) дэн буудал, тойн, лагшин
+B) богц, багц, ариутган шүүгч
+C) их хориг, өртөө, гүнцэг, зоог
+D) оточ, манцуй, хувилахуй ухаан
+E) хамтрал, атрын аян, нөхөр</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Үгийн сангийн онцлогоороо ялгаатай нь аль вэ? This translates to &#34;Which one is different in terms of its lexical field?&#34;
+
+* A lexical field is a group of words with related meanings.
+
+Now let&#39;s analyze the options:
+
+* A) дэн буудал, тойн, лагшин: These words relate to hunting and trapping.
+* B) богц, багц, ариутган шүүгч: These words relate to legal proceedings and courts.
+* C) их хориг, өртөө, гүнцэг, зоог: These words relate to types of crimes or punishments.
+* D) оточ, манцуй, хувилахуй ухаан: These words relate to traditional Mongolian medicine and healing.
+* E) хамтрал, атрын аян, нөхөр: These words relate to marriage and family.
+
+Looking at the options, D) оточ, манцуй, хувилахуй ухаан stands out as the group of words that don&#39;t fit into a clear, specific category like the others.
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: D</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Дараах үгсээс аль нь нутгийн аялгууны үг вэ?
+
+A) зайран
+B) богц
+C) жас
+D) боохой
+E) гос</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Нутгийн аялгууны үг means &#34;words related to the countryside/rural area&#34;.
+
+Now let&#39;s analyze the options:
+
+* A) зайран:  A type of animal (wild goat) found in mountainous areas, often considered rural.
+* B) богц: A type of bird, can be found in various environments, not specifically rural.
+* C) жас: A type of plant, can be found in various environments, not specifically rural.
+* D) боохой: A type of animal (wild sheep) found in mountainous areas, often considered rural.
+* E) гос: A type of animal (wild horse) found in steppe areas, often considered rural.
+
+Considering the definition of &#34;rural&#34; and the context of the options, the most fitting answers are A, D, and E.
+
+However, the question asks for one correct answer.  Since &#34;зайран&#34; and &#34;боохой&#34; are both animals found in mountainous, rural areas, &#34;зайран&#34; is a more general term.
+
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Хоёр гишүүнт бүтэцтэй холбоо үгийг олоорой.
+
+A) Улс төрд хүчин зүтгэх 
+B) Агтны бийд газар үзэх
+C) Эрхийг сурахаар бэрхийг сурах 
+D) Сонин сэтгүүлээ хурдан хэвлэх
+E) Багшийн заавраар хичээл давтах</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Хоёр гишүүнт бүтэцтэй холбоо үг: This means we&#39;re looking for a two-word phrase that functions as a single unit.
+
+Now let&#39;s examine the options:
+
+* A) Улс төрд хүчин зүтгэх - This is a phrase, but it doesn&#39;t function as a single unit.
+* B) Агтны бийд газар үзэх - This is a phrase, but it doesn&#39;t function as a single unit.
+* C) Эрхийг сурахаар бэрхийг сурах - This is a phrase that functions as a single unit, meaning &#34;to learn by doing.&#34;
+* D) Сонин сэтгүүлээ хурдан хэвлэх - This is a phrase, but it doesn&#39;t function as a single unit.
+* E) Багшийн заавраар хичээл давтах - This is a phrase, but it doesn&#39;t function as a single unit.
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Бүтээврийн нийлцийг зөв холбон бичсэн хэсгийг олоорой.
+Амьтан+ы орогнох оромжийг үүр гэж ерөнхийд нь нэр+л+дэг. Ойд байх олон сая шоргоолж
+зөөлөн шороог бөмбийл+вөл/бөл үүрээ зассаны шинж.
+
+A) Амьтны, нэрлэдэг, бөмбийлвөл
+B) Амьтаны, нэрлэдэг, бөмбийлбөл
+C) Амьтаны, нэрэлдэг, бөмбийлвөл
+D) Амьтны, нэрлэдэг, бөмбийлбөл
+E) Амьтны, нэрэлдэг, бөмбийлбөл</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the sentence and identify the correctly connected parts:
+
+* Амьтан+ы орогнох оромжийг үүр гэж ерөнхийд нь нэр+л+дэг.  This part talks about how a group of animals is generally called &#34;үүр&#34;.
+* Ойд байх олон сая шоргоолж зөөлөн шороог бөмбийл+вөл/бөл үүрээ зассаны шинж. This part describes the nature of a large number of animals living in the forest.
+
+Now, let&#39;s look at the options:
+
+* A) Амьтны, нэрлэдэг, бөмбийлвөл: This option seems plausible as it connects &#34;animal&#34; with &#34;naming&#34; and &#34;gathering&#34;.
+* B) Амьтаны, нэрлэдэг, бөмбийлбөл: This option seems incorrect as &#34;бөмбийлбөл&#34; isn&#39;t a standard Mongolian word.
+* C) Амьтаны, нэрэлдэг, бөмбийлвөл: This option has a spelling error (&#34;нэрэлдэг&#34; instead of &#34;нэрлэдэг&#34;).
+* D) Амьтны, нэрлэдэг, бөмбийлбөл: Similar to option B, this option has an incorrect word &#34;бөмбийлбөл&#34;.
+* E) Амьтны, нэрэлдэг, бөмбийлбөл: This option has both spelling errors (&#34;нэрэлдэг&#34; and &#34;бөмбийлбөл&#34;).
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Гадаад үгэнд харьяалахын тийн ялгалын “-ийн, -ын” нөхцөлийг зөв дагуулан бичсэн хэсгийг
+олоорой.
+
+A) клубийн, брокерийн, тактикийн
+B) клубын, брокерын, тактикын
+C) клубийн, брокерын, тактикийн
+D) клубын, брокерийн, тактикын
+E) клубийн, брокерын, тактикын</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* The question asks: Identify the correctly spelled group of words ending in &#34;-ийн, -ын&#34; which indicates possessive case in Mongolian.
+
+* Analyze the options:
+
+    * A) клубийн, брокерийн, тактикийн 
+    * B) клубын, брокерын, тактикын
+    * C) клубийн, брокерын, тактикийн
+    * D) клубын, брокерийн, тактикын
+    * E) клубийн, брокерын, тактикын
+
+* Apply the rule:  &#34;-ийн&#34; is used after words ending in a consonant, while &#34;-ын&#34; is used after words ending in a vowel.
+
+* Identify the correct option: Option C) клубийн, брокерын, тактикийн follows the rule correctly.
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: C</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үгсийг утгаар нь зөв ялган бичсэнийг олоорой.
+
+A) хойд тууль, үлгэр туйл
+B) хойд туйл, үлгэр тууль
+C) хүрзний эш, иш татах
+D) хүрзний иш, иш татах
+E) эш татах, хойд тууль</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Үгсийг утгаар нь зөв ялган бичсэнийг олоорой. This translates to &#34;Find the words that are correctly matched by meaning.&#34;
+
+Now let&#39;s look at the options:
+
+* A) хойд тууль, үлгэр туйл -  &#34;North wind&#34; and &#34;example wind&#34;. These don&#39;t match in meaning.
+* B) хойд туйл, үлгэр тууль - &#34;North wind&#34; and &#34;example wind&#34;. These don&#39;t match in meaning.
+* C) хүрзний эш, иш татах - &#34;Desire&#34; and &#34;to wish&#34;. These have similar meanings.
+* D) хүрзний иш, иш татах - &#34;Desire&#34; and &#34;to wish&#34;. These have similar meanings.
+* E) эш татах, хойд тууль - &#34;To wish&#34; and &#34;north wind&#34;. These don&#39;t match in meaning.
+
+Options C and D both have word pairs with similar meanings.
+
+Answer: D 
+
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: B</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Ч.Лодойдамба “Алтайд” туужийн дараах хэсгүүдийн аль нь нийгмийн хам сэдвийг илтгэх вэ?
+
+A) Геологичид энэ хоёр өдрийн дотор нөгөө л цахилгаантай газрын орчим л ажилласан
+ба гэвч урьдахаасаа өөр юм олж үзэж чадсангүй.
+B) Чингисийн цэрэг баруун тийш довтлох үед хэсэг цэрэг Алтайн нуруунд аянгад цохиулж
+үхсэн ба Зэв мөн тусгай баатруудыг уг газарт очуулсан нь бас үхжээ.
+C) Улиастайд байсан шоронд хоёр сар гаруй болоод, хэдэн хүмүүсийн хамт оргож гараад,
+жингийн зам тосож, Хятадын юм дээрэмдэн явжээ.
+D) Га авгай босго алхмагц зогсоод малгайгаа авч бүгдийг бөхөлзөн амарчлахад дагз дээр
+нь ширэлдсэн буурал гэзэгний тав нь модолзоно.
+E) Галдан өвгөний энгэр дээр сайн малчны тэмдэг бас хэд хэдэн одон медаль гялалзана.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The question asks which passage reflects social customs.
+
+* A) Describes geologists&#39; work, not social customs.
+* B) Tells a story about Chinggis Khan&#39;s army and a hero, not social customs.
+* C) Describes a journey and actions, not social customs.
+* D) Describes a scene of death and possessions, not social customs.
+* E) Mentions &#34;good shepherd&#39;s mark&#34; and medals, which could suggest social recognition or values.
+
+Answer: E
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: E</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Ч.Лодойдамба “Алтайд” туужийн доорх нөхцөл байдлаас Галданг хэрхэн дүгнэж болох вэ?
+Галдан бол залуудаа говийн нэртэй анчин байгаад сүүлдээ багийн дарга, нэгдлийн дарга зэрэг ажил хийгээд ан хийхээс нэлээд тасарсан хүн юм. Залуудаа бол 4-5 тэмээтэй яваад л
+түүндээ зээр, аргаль, янгирын мах дааж
+ядтал ачаад ирдэг хүн байсан юм. Нутгийн олондоо ихээхэн хүндтэй болоод ардууд түүнийг Га авгай гэж нэрлэдэг хүн юм. Га авгай бол нэгдэлд ороод хэдэн жил болж байгаа бөгөөд одоо нэгдлийнхээ тэргүүлэгч гишүүн юм. Бас нэгдлийн тэмээ хариулах зэргээр Га авгай нэгдэлдээ чадах ядахаараа ажлаа үргэлж хийдэг хүн билээ.
+
+A) Бага залуугаасаа л нутаг усныхандаа хүндлэгдсэн төлөв төвшин хүн.
+B) Алив бүх ажлыг хийж чаддаг сэргэлэн зангийнхаа ачаар амжилттай яваа хүн.
+C) Залуугаасаа нэртэй анчин байсныхаа нөлөөгөөр нэгдэлдээ тэргүүлж буй хүн.
+D) Ажилч хөдөлмөрч байсныхаа ачаар үр шимийг нь хүртэж яваа хүн.
+E) Ажлын арга эвийг олсон хашир туршлагатай нутгийн хүн.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage describes Galdaan as someone who was a renowned hunter in his youth, later becoming a leader in his community. He is hardworking and dedicated to his community, excelling in various roles.
+
+A) This option focuses on Galdaan&#39;s early life and doesn&#39;t highlight his leadership and community contributions.
+B) While Galdaan is capable, the passage emphasizes his dedication and hard work rather than being &#34;seregelen&#34; (versatile).
+C) This option accurately reflects Galdaan&#39;s journey from a skilled hunter to a respected leader in his community.
+
+D) This option is too general and doesn&#39;t capture the specific details about Galdaan&#39;s journey and achievements.
+E) While Galdaan is experienced, the passage emphasizes his dedication and community involvement more than his &#34;turshlaga&#34; (experience).
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Ч.Лодойдамба “Алтайд” туужаас үндэсний ижилсэл буюу монгол хүний зан заншил, сэтгэл зүйн өвөрмөц онцлогийг илэрхийлсэн хэсгийг олоорой.
+
+A) Гадаа морьдын тургих, манаанд гарсан Идэрийн хааяа хааяа исгэрэхээс өөр чимээ
+бас л үгүй нам гүм байлаа.
+B) Дамдин “Зүрх хайрхан” гэж заахдаа долоовор хуруу нь тэнгэрийн хаяанаас нэлээд
+дээгүүр чиглэв.
+C) Авдрууд дээр юу ч тавиагүй бөгөөд зүүн талд нь навтгар ор зассаны өмнө элгээ хүрсэн
+цагаан сахалтай ханхар цээжтэй өвгөн цай ууж сууна.
+D) Алтай нь манай эх орны нуруунуудын хамгийн урт нь бөгөөд хамгийн өндөр оргилтой
+нь юм.
+E) «Лус савдгийн буюу бурхны орон харагдаж магад, хэрэв харагдах юм бол заяа буян
+дэлгэрэх болно» гэж бодоод тэмээнээсээ буув.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage talks about the unique cultural characteristics and mindset of the Mongolian people. We need to find the sentence that best exemplifies this.
+
+Let&#39;s analyze each option:
+
+A) Describes a scene of silence and stillness, not necessarily reflecting cultural traits.
+B) Focuses on a specific character&#39;s actions and does not speak to broader cultural themes.
+C) Paints a picture of a setting and a person, but doesn&#39;t delve into cultural aspects.
+D) Provides factual information about the Altai Mountains, not cultural insights.
+E)  Expresses a belief in a spiritual realm, which could be considered part of Mongolian cultural beliefs.
+
+Therefore, the sentence that best reflects the Mongolian people&#39;s unique mindset and cultural identity is:
+
+E) «Лус савдгийн буюу бурхны орон харагдаж магад, хэрэв харагдах юм бол заяа буян дэлгэрэх болно» гэж бодоод тэмээнээсээ буув.
+
+Answer: E
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: E</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Б.Лхагвасүрэн “Тамгагүй төр” жүжгийн дараах хэсгүүдийн аль нь хаан төр ариун байх ёстойг
+харуулж байна вэ?
+
+A) Хүннү төрийн тамгыг барих
+Хүнгүй болчихоор нь
+Хоёр сүүн уулын цаана
+Хорин улаан горхины газар булчихсан.
+B)  Эгэрэг өрлөг надад хэлэхдээ
+Эцгийгээ үхэхээр чи
+Эхтэйгээ гэрлэнэ гэж хэлсэн
+Эрхэт төрийн ёс тийм гэсэн.
+C) Арав алхахад найм нь алдаа
+Адасга мэт араншинтай
+Хүний нүд жавраар хайрсан
+Хүүтэй юм байна, чи бид хоёр.
+D) Тэнгэрийн дор нэг л хаан
+Өөрийнхөө он цагийг элээж
+Өнгөрсөн хойно нь их орыг
+Өөр нэгэн нэхдэг нь учиртай.
+E)  Та бид хоёр үг таргалуулж суугаад яах вэ
+Тамгаа өгчих
+Сэтгэлээ барихыг хүсье
+Сэнтийг чинь бол бөгс минь олоод суучихна.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The question asks which line from the play &#34;Tamgagui Tor&#34; by B.Lhagvasuren shows that the emperor&#39;s lineage should be pure.
+
+Let&#39;s analyze each option:
+
+A) This option talks about the establishment of the Hunnic Empire&#39;s seal and doesn&#39;t mention anything about the purity of the emperor&#39;s lineage.
+
+B) This option talks about the tradition of marrying the emperor&#39;s sister to maintain the purity of the royal bloodline.
+
+C) This option talks about the bond between a father and son but doesn&#39;t mention anything about the purity of the emperor&#39;s lineage.
+
+D) This option talks about the emperor&#39;s reign and legacy but doesn&#39;t mention anything about the purity of the emperor&#39;s lineage.
+
+E) This option talks about a conversation about giving a seal and doesn&#39;t mention anything about the purity of the emperor&#39;s lineage.
+
+Therefore, the correct answer is B.
+
+Answer: B
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: B</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Б.Лхагвасүрэн “Тамгагүй төр” жүжгийн хэсгийг уншаад, дотоод орчноос дүрийн сэтгэл
+хөдлөлийг тодорхойлоорой.
+Хамгийн сүүлчийн удаа
+Хаан гэдгээ мартан өлмийд чинь сөгдье.
+Эцсийн удаа гишгэсэн газрын чинь
+Эсгэсэн шороог би ус шиг залгилъя.
+
+A) сэтгэл нялхарсан
+B) сэтгэл догдолсон
+C) сэтгэл дэнсэлсэн
+D) сэтгэл уярсан
+E) сэтгэл хоргодсон</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the excerpt and the emotional state it portrays:
+
+* &#34;Хаан гэдгээ мартан өлмийд чинь сөгдье&#34;: This line suggests a sense of defeat and resignation. The speaker, who was once a Khan, is now humbled and facing his mortality.
+* &#34;Эцсийн удаа гишгэсэн газрын чинь  Эсгэсэн шороог би ус шиг залгилъя&#34;: This line evokes a sense of longing and perhaps regret. The speaker wants to cleanse himself, metaphorically washing away his past.
+
+Considering these lines, the most fitting emotional state is sorrow and regret. 
+
+
+Answer: B
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: B</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Б.Лхагвасүрэн “Тамгагүй төр” жүжгийн дараах хэсгээс дүрийн ямар хэв шинж илэрч байна вэ?
+Эрт гундсан үзэсгэлэн чинь
+Хааны дурыг гутааж
+Элэгнээс чинь унасан үрд чинь
+Хаан болохын заяаг дутаасан
+Хяслын энэ орчлонгоос
+Хариугаа би авна.
+
+A) эзлэн түрэмгийлсэн
+B) дээрэлхэж бардамнасан
+C) өширхөж дайсагнасан
+D) эр чадалдаа эрэмшсэн
+E) басамжлан бардсан</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the passage and analyze the character&#39;s traits:
+
+* &#34;Эрт гундсан үзэсгэлэн чинь&#34;: This suggests a past filled with ambition and possibly ruthless actions.
+* &#34;Хааны дурыг гутааж&#34;:  Indicates a willingness to deceive or manipulate to achieve goals.
+* &#34;Элэгнээс чинь унасан үрд чинь&#34;:  Implies a sense of regret or burden from past actions.
+* &#34;Хаан болохын заяаг дутаасан&#34;: Shows a desire for power and leadership.
+* &#34;Хяслын энэ орчлонгоос Хариугаа би авна&#34;:  Demonstrates a sense of responsibility and willingness to face the consequences of actions.
+
+Considering these points, the most fitting character trait is D) эр чадалдаа эрэмшсэн (mastered his power). The passage portrays a character who has used his power, perhaps ruthlessly, but is now facing the consequences and taking responsibility.
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Ч.Дагвадорж “Шувуун зэл” шүлгийн
+“Үдэш, орой,
+Үүр цүүрээр
+Үүлэн цаанаас дэв дэвсээр ганганаж
+Үргэлжлэн хошуурсан шувуун зэл” хэсэгт айзам хэмнэлийг тааруулахдаа зохиогч
+найруулгын ямар уран хэрэглүүр ашигласан байна вэ? 
+
+A) тэгш хэлбэрээр дүрсэлсэн зэрэгцүүлэл
+B) санааг гүнзгийрүүлэн давтсан давталт
+C) аажмаар өсгөн дүрсэлсэн ахиулал
+D) эсрэг тэсрэгийг сөргөцүүлсэн харшуулал
+E) хэлбэр өөр үгсийг сөөлжүүлсэн сөөлжүүлэл</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage uses repetition of the word &#34;Үүр&#34; and its variations (&#34;Үүр цүүрээр,&#34; &#34;Үүлэн цаанаас&#34;) to emphasize the continuous, persistent nature of the bird&#39;s flight. This repetition creates a sense of rhythm and movement, mimicking the bird&#39;s fluttering wings.
+
+Answer: B 
+
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: B</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+Эхэд буй үгсийг утгатай нь зөв тохируулаарай.
+1) цондон a. юман дээрх хотгор
+2) гарваль b. маш, тун
+3) хонхор c. богино
+4) ахар d. тавилан, ёр
+5) асар e. анхны, үүдэл
+
+A) 1b, 2e, 3a, 4c, 5d 
+B) 1d, 2e, 3a, 4c, 5b
+C) 1d, 2e, 3a, 4b, 5c
+D) 1d, 2b, 3e, 4a, 5c
+E) 1d, 2e, 3b, 4a, 5c</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the passage and match the words to their meanings:
+
+* цондон: This word is used in the context of &#34;хухийн цондон татна&#34; which implies a fading or disappearing act. This points towards the meaning of &#34;a. юман дээрх хотгор&#34; which can be interpreted as a fleeting shadow or something ephemeral.
+
+* гарваль: This word is used in &#34;гарваль язгууртаа орох&#34; suggesting a return to an origin or source. This aligns with the meaning of &#34;e. анхны, үүдэл&#34; meaning origin.
+
+* хонхор: This word is used in &#34;хонхрын хормой хумьж&#34; implying a gathering or convergence. This matches the meaning of &#34;a. юман дээрх хотгор&#34; which can also refer to a gathering point.
+
+* ахар: This word is used in &#34;ахархан амьдрал&#34; suggesting a prolonged or extended existence. This points towards the meaning of &#34;d. тавилан, ёр&#34; meaning long or extended.
+
+* асар: This word is used in &#34;асар богино хугацаатай&#34; emphasizing the shortness of something. This aligns with the meaning of &#34;c. богино&#34; meaning short. 
+
+
+Therefore, the correct matching is:
+
+1) цондон - a. юман дээрх хотгор
+2) гарваль - e. анхны, үүдэл
+3) хонхор - a. юман дээрх хотгор
+4) ахар - d. тавилан, ёр
+5) асар - c. богино
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: B</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+Эсээний хөтөч санаа аль нь вэ?
+
+A) Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй…
+B) “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор
+гүдгэрийг нь нэгжих эрхэм үү?”
+C) “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал
+ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+D) Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ.
+E) Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг
+нь ч нэгжмээр!</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage is a philosophical reflection on life, death, and the search for meaning. The speaker contemplates the vastness of the universe and the brevity of human life. 
+
+The &#34;esee&#34; (thought) is a central theme, and the passage ends with the question &#34;Эсээний хөтөч санаа аль нь вэ?&#34; which translates to &#34;What is the deepest thought of the esee?&#34;.
+
+Looking at the options:
+
+* A is simply the beginning of the passage and doesn&#39;t represent a deep thought.
+* B is a question the speaker asks themselves, but not necessarily their deepest thought.
+* C expresses the speaker&#39;s struggle to understand the meaning of life, but it&#39;s a process, not a single thought.
+* D introduces the concept of limits and infinity, a potential candidate for a deep thought.
+* E is a concluding statement summarizing the fleeting nature of life, but not necessarily the deepest thought.
+
+Considering the context and the phrasing of the final question, option D seems to be the most profound and encapsulates a central theme explored in the passage.
+
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+“Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг.” толгой өгүүлбэрийг дэмжих
+өгүүлбэр аль вэ?
+
+A) Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж
+хариулах оньсого ч юм шиг.
+B) Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна.
+C) Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт
+хүн бүдэрч “худалдагдана!”
+D) Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!...
+E) Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж
+нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage states &#34;Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг.&#34; which translates to &#34;Ongosion is like answering a question with another question.&#34;
+
+Option A describes a cyclical process of questioning and answering, but doesn&#39;t directly state that the answer is another question.
+
+Option B describes a &#34;game&#34; of oongosion, but doesn&#39;t explicitly say that the answer is a question.
+
+Option C describes a situation where someone who is answered to feels &#34;bought,&#34; but doesn&#39;t directly relate to the definition of oongosion.
+
+Option D compares life to an unanswered question, which is related to the concept of oongosion but doesn&#39;t directly define it.
+
+Option E describes the struggle between limitations and infinity, which is a philosophical concept but doesn&#39;t directly relate to the definition of oongosion.
+
+Therefore, the best answer is A.
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+“Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж
+хариулах оньсого ч юм шиг” хэмээсний учир юу вэ?
+
+A) Таалгасан хүн нь таагаагүйгээ худалддаг учраас
+B) Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж суудаг учраас
+C) Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг учраас
+D) Оньсого гэдэг инээдтэй наадам учраас
+E) Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч худалдагддаг учраас</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage states that &#34;Оньсого гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг&#34;. This translates to &#34;The riddle is like asking a question and then answering it with another question&#34;. 
+
+Therefore, the correct answer is C) Oньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг учраас.
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+Эсээнд дэвшүүлсэн асуудал аль нь вэ?
+
+A) Амьдралын мөн чанарыг таних тухай
+B) Амьдрал анх эхэлсэн цэгтээ дуусдаг тухай
+C) Хүний амьдрал тааварлашгүй байдаг тухай
+D) Хязгааргүй зүйл гэж байдаггүй тухай
+E) Амьдрал бол үл мэдэгдэх оньсого шиг байдаг тухай</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The poem explores the complexities of life, its cyclical nature, and the endless pursuit of answers. It highlights the constant tension between limitations and the desire for boundless knowledge. The speaker contemplates the nature of existence, questioning the meaning of life and the elusiveness of definitive answers.
+
+The question asks about the central issue raised in the poem.
+
+The poem focuses on the enigmatic and paradoxical nature of life, comparing it to a riddle or a never-ending game of question and answer.
+
+Therefore, the most appropriate answer is:
+
+Answer: E
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: E</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+Эсээний гол санааг илэрхийлэх түлхүүр өгүүлбэрийг олоорой.
+
+A) Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+B) Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж
+нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг.
+C) Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд
+болчихсон орь ганц тайлал үгүй оньсого шиг!...
+D) Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+E) Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг
+нь ч нэгжмээр!</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage explores the complex and paradoxical nature of life, comparing it to an endless cycle of seeking and striving. It highlights the tension between limitations and aspirations, the search for meaning, and the ultimate futility of it all.
+
+The core idea is best captured in option C:
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+“Хүн хүн дор дороо тааж, хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж,
+няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч... эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!” гэсэн хэсэгт зохиогч санаагаа хэрхэн гаргасан байна вэ?
+
+A) Сэтгэлийн өнгө аяс, санаагаа анхааруулан сануулсан
+B) Төстэй хэлбэрээр, тэгш эрхтэйгээр зэрэгцүүлсэн
+C) Санаагаа аажмаар өсгөн дүрсэлж, хүч нэмэн ахиулсан
+D) Эсрэг тэсрэг санааг сөргөцүүлэн дүрсэлж харшуулсан
+E) Ижил төстэй үгсийг салаавчлан бичиж сөөлжүүлсэн</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage describes a cycle of questioning, seeking answers, and ultimately finding that the answers lead to more questions. This is depicted through a series of actions: asking, answering, debating, arguing, competing, and ultimately ending in a state of emptiness.  The author uses a cascading structure, building upon each action to show the escalating nature of the search for meaning.
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: C</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+“Таалгасан хүн нь таагаагүйгээ худалдана!” өгүүлбэрийг зөв тодорхойлоорой.
+
+A) Зэрэгцэх, угсрах холбооноос бүтсэн холимог нийлмэл өгүүлбэр
+B) Тодотгол гишүүн өгүүлбэртэй угсарсан нийлмэл өгүүлбэр
+C) Шууд тусагдахуун гишүүн өгүүлбэртэй угсарсан нийлмэл өгүүлбэр
+D) Олон гишүүн өгүүлбэртэй угсарсан нийлмэл өгүүлбэр
+E) Зэрэгцэх, харилцан угсрах холбооноос бүтсэн холимог нийлмэл өгүүлбэр</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The sentence &#34;Таалгасан хүн нь таагаагүйгээ худалдана!&#34; is a complex sentence with a main clause and a subordinate clause. 
+
+The subordinate clause is &#34;таагаагүйгээ худалдана!&#34;, which modifies the noun &#34;хүн&#34;.
+
+Therefore, the correct answer is:
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: C</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+Аль нь хэлц өгүүлбэр вэ?
+
+A) Хүн хүн дор дороо тааж, дор дороо хариу гаргана.
+B) Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг.
+C) Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү.
+D) Амьдрал асар богино хугацаатай юм даа.
+E) Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч худалдагдана.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>This excerpt is a philosophical reflection on the nature of life, existence, and the search for meaning. It explores themes of duality, the limits of knowledge, and the cyclical nature of existence.
+
+The passage opens with a question about the purpose and meaning of life, comparing it to climbing a mountain to see distant horizons. It then delves into the concept of infinity and finitude, suggesting that these two concepts are interconnected and constantly in tension.
+
+The author uses the metaphor of a &#34;tug-of-war&#34; to describe the human condition, where individuals constantly seek answers and meaning, often engaging in debates and arguments that ultimately lead nowhere.
+
+The excerpt concludes by reiterating the ephemeral nature of life and the futility of searching for definitive answers.
+
+Considering the passage&#39;s central themes and the options provided, the most accurate answer is:
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+“Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.” өгүүлбэрийг
+салаалан хувиргасан нь аль вэ?
+
+A) Үүрийн манан татчихаад, уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+B) Үүрийн манан татчихаад, урд тал цэлийнэ үү, уул сүндэрлэнэ үү, эс мэдэгдэнэ..
+C) Үүрийн манан татчихаад, урд уул хад сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+D) Үүрийн манан татчихаад, урд уул дүнхийнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+E) Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал хөндий цэлийнэ үү, эс мэдэгдэнэ.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The correct answer is the one that closely mirrors the original Mongolian text&#39;s structure and word order.
+
+Looking at the options, A) Үүрийн манан татчихаад, уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.  
+
+best preserves the original sequence.
+
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+“Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг” өгүүлбэр дэх “харин” хэмээх холбоос эхэд ямар утга, үүргээр орсон байна вэ?
+
+A) эсрэгцүүлэх утгыг зааж, зэрэгцүүлэн холбох үүргээр
+B) онцлох утгыг зааж, эсрэгцүүлэн холбох үүргээр
+C) зэрэгцүүлэх утгыг зааж, эсрэгцүүлэн холбох үүргээр
+D) лавшруулах утгыг зааж, төлөөлөн холбох үүргээр
+E) ялгах утгыг зааж, төлөөлөн холбох үүргээр</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage discusses the nature of life as a continuous cycle of questioning and seeking answers, comparing it to a riddle without a solution. The word &#34;харин&#34; (but) introduces a contrasting idea to the previous statement.
+
+* The previous statement talks about life as a riddle without a clear answer, with the creator withholding the solution.
+
+* &#34;харин&#34; introduces the idea that despite this lack of a definitive answer, life itself is the question and the ongoing search for meaning is the essence of existence.
+
+Therefore, &#34;харин&#34; is used to contrast the idea of a riddle with a missing answer with the idea that the very act of searching for meaning is what constitutes life.
+
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: A</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+“Урд уул сүндэрлэнэ үү, тал цэлийнэ үү” нийлмэл өгүүлбэр хэрхэн холбогдсон байна вэ?
+
+A) аялгаар
+B) нөхцөлөөр
+C) асуух утгат үгээр
+D) нөхцөл ба үгээр
+E) үгийн үндсээр</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage connects the phrases &#34;Урд уул сүндэрлэнэ үү&#34; and &#34;тал цэлийнэ үү&#34; through a combination of:
+
+* Context: The phrases describe the mysterious journey and purpose of life.
+* Logical connection: The first phrase suggests a vast, unknown journey (&#34;Урд уул сүндэрлэнэ&#34;), while the second implies a destination or goal (&#34;тал цэлийнэ&#34;).
+
+Therefore, the best answer is D) нөхцөл ба үгээр.
+
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үүр (эсээ)
+Үүрийн манан татчихаад, урд уул сүндэрлэнэ үү, тал цэлийнэ үү, мэдэгдэхгүй...
+Өөрөөсөө асуунам: “Уулын оройд мацаж, алсын үзүүр харах эрхэм үү, хонхрын хормой хумьж, хотгор гүдгэрий нь нэгжих эрхэм үү?”
+Дотроо бодном: “Аль алинд нь амьдын хугацаа хүрнэ гэж үү дээ? Хариу олоход хүний амьдрал ахардах ч юм шиг... Гэтэл хүний ахархан амьдрал шиг урт нь юу билээ дээ.
+Наагуур бодоход, хязгааргүйн тасархай болсон хязгаар хүнийг хашна. Цаагуур бодтол,
+хязгааргүй нь хязгаараасаа эхэлнэ. Хязгааргүйгээсээ тасарч төрсний учир, төрсөн элгээ татан эргэж нийлэх гэж үргэлж тэмүүлнэ. Хязгаарт юм ийнхүү хязгааргүйдээ очиж, гарваль язгууртаа орох, хязгааргүйгээ тэлж нийлэх гэж тэмүүлэх үргэлжийн тэмүүлэл л амьдрал юм шиг. Алив хязгаар ч юм уу хугацаа гэдэг инээж асуухад уйлж хариулах, уйлж асуухад инээж хариулах оньсого ч юм шиг. Оньсого гэдэг инээдтэй наадам. Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна. Таалгасан хүн нь таагаагүйгээ худалдана! Үг бүхэндээ хариу нь булталзаастай тааварт хүн бүдэрч “худалдагдана!”
+Оньсого гэдэг хариунаас нь хариулж асуусан асуулт шиг. Харин энэ амьдрал гэгч асуулт-оньсого л, зохиосон хүн нь хариугаа задлалгүй өөд болчихсон орь ганц тайлал үгүй оньсого шиг!... Хүн хүн дор дороо тааж, дор дороо хариу гаргаж, олсон хариуг нь хүн хүн дур дураараа няцааж, няцаахаар ч барахгүй ханцуй шамлалцаж, ханцуй шамлалцахаар ч барахгүй барилцан авч, барилцан авахаар барахгүй багалзуурдалцан зууралдаж, багалзуурдалцахаар барахгүй амь насаа юүлэлцэж, эцэс сүүлдээ эзгүй хоосонд арилах хохийн цондон татна!
+Уулын оройд мацаж, алсын үзүүр ч хармаар, хонхрын хормой хумьж, хотгор гүдгэрийг нь ч нэгжмээр! Даанч хөөрхий, аугаа их амьдрал асар богино хугацаатай юм даа!
+Үүрийн манан татчихаад урд уул сүндэрлэнэ үү, тал цэлийнэ үү, эс мэдэгдэнэ.
+Үүр биш үдэш мэт бүрий нөмрөвч үүр гэсэндээ хаяа нь тэмдгэрнэ...
+Д.Урианхай
+“Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна.” өгүүлбэр дэх “хатаж”
+хэмээх үг эхэд ямар утгаар орсон байна вэ?
+
+A) санаашрах бодлогошрох 
+B) эргэцүүлэх тунгаах
+C) зовох шаналах 
+D) таах таамаглах
+E) эргэлзэх тээнэгэлзэх</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage describes a philosophical contemplation on life, existence, and the nature of questions and answers. In the context of the sentence &#34;Таалгах хүн нь инээд хүрч суухад таах хүн нь бодолд хатаж сууна,&#34; the word &#34;хатаж&#34; refers to the state of the person being asked. They are not actively engaging with the question, but rather retreating into their thoughts, perhaps overwhelmed or hesitant.
+
+Answer: C
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: C</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    </body>
+</html>

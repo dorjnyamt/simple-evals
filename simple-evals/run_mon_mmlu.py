@@ -13,7 +13,7 @@ from .sampler.o1_chat_completion_sampler import O1ChatCompletionSampler
 
 
 def main():
-    debug = True
+    debug = False
     samplers = {
         # "gpt-4o_chatgpt": ChatCompletionSampler(
         #     model="gpt-4o",
@@ -30,12 +30,18 @@ def main():
         #     system_message=OPENAI_SYSTEM_MESSAGE_API,
         #     max_tokens=2048,
         # ),
-        "gemma-2-9b-it": ChatCompletionSampler(
-            model="gemma-2-9b-it",
-            system_message=OPENAI_SYSTEM_MESSAGE_API,
+        # "gemma-2-9b-it": ChatCompletionSampler(
+        #     model="gemma-2-9b-it",
+        #     system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:1234/v1"
+        # ),
+        "gemma-2-27b-it": ChatCompletionSampler(
+            model="google/gemma-2-27b-it",
+            # system_message=OPENAI_SYSTEM_MESSAGE_API,
             max_tokens=2048,
-            base_url="http://localhost:1234/v1"
-        )
+            base_url="http://localhost:8000/v1"
+        ),
         # "o1-preview": O1ChatCompletionSampler(
         #     model="o1-preview",
         # ),

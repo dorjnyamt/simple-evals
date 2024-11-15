@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>0.1</td>
+    </tr>
+    
+    <tr>
+        <td>mongolian</td>
+        <td>0.1</td>
+    </tr>
+    
+    <tr>
+        <td>mongolian:std</td>
+        <td>0.30000000000000004</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.30000000000000004</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Бүтээврийн нийлцийг зөв холбон бичсэн хэсгийг олоорой.
+Амьтан+ы орогнох оромжийг үүр гэж ерөнхийд нь нэр+л+дэг. Ойд байх олон сая шоргоолж
+зөөлөн шороог бөмбийл+вөл/бөл үүрээ зассаны шинж.
+
+A) Амьтны, нэрлэдэг, бөмбийлвөл
+B) Амьтаны, нэрлэдэг, бөмбийлбөл
+C) Амьтаны, нэрэлдэг, бөмбийлвөл
+D) Амьтны, нэрлэдэг, бөмбийлбөл
+E) Амьтны, нэрэлдэг, бөмбийлбөл</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the passage and look for the correctly connected parts.
+
+The passage talks about the Mongolian word &#34;үүр&#34; which generally means &#34;prediction&#34; or &#34;omen&#34; related to animals. It then mentions the characteristic of a forest with millions of insects that fall silent when the animals&#39; prediction is fulfilled.
+
+We need to find the part where words are correctly connected. Looking at the options:
+
+* A) Амьтны, нэрлэдэг, бөмбийлвөл - This seems plausible as &#34;амьтны&#34; is the possessive form of &#34;animal,&#34; &#34;нэрлэдэг&#34; means &#34;called,&#34; and &#34;бөмбийлвөл&#34; could be a combination of &#34;böm&#34; (meaning &#34;silent&#34;) and &#34;өлөл&#34; (meaning &#34;death&#34;).
+
+* B) Амьтаны, нэрлэдэг, бөмбийлбөл - This option has a spelling error (&#34;бөмбийлбөл&#34;).
+
+* C) Амьтаны, нэрэлдэг, бөмбийлвөл -  &#34;нэрэлдэг&#34; is not a correct Mongolian word.
+
+* D) Амьтны, нэрлэдэг, бөмбийлбөл - This option has a spelling error (&#34;бөмбийлбөл&#34;).
+
+* E) Амьтны, нэрэлдэг, бөмбийлбөл - This option has two spelling errors (&#34;нэрэлдэг&#34; and &#34;бөмбийлбөл&#34;).
+
+Therefore, the most likely correct answer is A.
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Үгсийг утгаар нь зөв ялган бичсэнийг олоорой.
+
+A) хойд тууль, үлгэр туйл
+B) хойд туйл, үлгэр тууль
+C) хүрзний эш, иш татах
+D) хүрзний иш, иш татах
+E) эш татах, хойд тууль</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the Mongolian sentence and the options:
+
+* Үгсийг утгаар нь зөв ялган бичсэнийг олоорой. This means &#34;Find the one that is correctly written according to its meaning.&#34;
+
+Now, let&#39;s analyze the options:
+
+* A) хойд тууль, үлгэр туйл:  This translates to &#34;north wind, example wind.&#34; 
+* B) хойд туйл, үлгэр тууль: This translates to &#34;north wind, example wind.&#34;
+* C) хүрзний эш, иш татах: This translates to &#34;desire&#39;s wish, wish to reach.&#34;
+* D) хүрзний иш, иш татах: This translates to &#34;desire&#39;s wish, wish to reach.&#34;
+* E) эш татах, хойд тууль: This translates to &#34;wish to reach, north wind.&#34;
+
+Notice that options A and B are very similar, as are options C and D.  The most meaningful pairing seems to be D) хүрзний иш, иш татах which translates to &#34;desire&#39;s wish, wish to reach.&#34;
+
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: B</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой.
+
+A) данс, хөрөнгө, тэгшитгэл 
+B) рубль, юань, фонд, евро
+C)  бордоо, хөрс, цэвдэг, хлор
+D) мангани, азот, магни, хүхэр
+E) онцолбор, дэвсвэр, урвал</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой. This translates to &#34;Find the part that belongs to one category.&#34;
+
+Now let&#39;s look at the options:
+
+* A) данс, хөрөнгө, тэгшитгэл (account, capital, equation) - These are related to finance and mathematics.
+* B) рубль, юань, фонд, евро (ruble, yuan, fund, euro) - These are all types of currency or financial instruments.
+* C)  бордоо, хөрс, цэвдэг, хлор (bordeaux, soil, fertilizer, chlorine) - These are related to agriculture or chemistry.
+* D) мангани, азот, магни, хүхэр (manganese, nitrogen, magnet, iron) - These are elements or materials.
+* E) онцолбор, дэвсвэр, урвал (crime, event, movement) - These are related to social phenomena.
+
+The most coherent category is B) рубль, юань, фонд, евро (ruble, yuan, fund, euro) as they all relate to currency and finance.
+
+
+Answer: B
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: D</p>
+<p>Extracted Answer: B</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Ч.Дагвадорж “Шувуун зэл” шүлгийн
+“Торойх цэг,
+Тодорсоор, бүдгэрсээр, тодорсоор
+Тоонон дээгүүр шувуун зэл
+Ганганасаар, гунганасаар, ганганасаар” хэсэгт айзам хэмнэлийг тааруулахдаа зохиогч
+найруулгын ямар уран хэрэглүүр ашигласан байна вэ?
+
+A) санааг гүнзгийрүүлэн давтсан давталт
+B)  аажмаар өсгөн дүрсэлсэн ахиулал
+C) тэгш хэлбэрээр дүрсэлсэн зэрэгцүүлэл
+D) эсрэг тэсрэгийг сөргөцүүлсэн харшуулал
+E) урнаар анхааруулсан уран анхааруулал</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage provided uses repetition of words and phrases like &#34;тодорсоор,&#34; &#34;ганганасаар,&#34; and &#34;тоонон дээгүүр&#34; to emphasize the image of the bird flying upwards. This repetition creates a sense of rhythm and momentum, mirroring the bird&#39;s flight.
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: B</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Б.Лхагвасүрэн “Тамгагүй төр” жүжгийн дараах хэсгээс дүрийн ямар хэв шинж илэрч байна вэ?
+Эрт гундсан үзэсгэлэн чинь
+Хааны дурыг гутааж
+Элэгнээс чинь унасан үрд чинь
+Хаан болохын заяаг дутаасан
+Хяслын энэ орчлонгоос
+Хариугаа би авна.
+
+A) эзлэн түрэмгийлсэн
+B) дээрэлхэж бардамнасан
+C) өширхөж дайсагнасан
+D) эр чадалдаа эрэмшсэн
+E) басамжлан бардсан</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The passage describes a character who has overcome past hardships and is now ready to take responsibility.  They have endured hardship (&#34;Эрт гундсан үзэсгэлэн чинь&#34;), overcome challenges (&#34;Хааны дурыг гутааж&#34;, &#34;Элэгнээс чинь унасан үрд чинь&#34;), and is now prepared to face the future (&#34;Хариугаа би авна&#34;).
+
+This suggests a character who has shown resilience and determination.
+
+Of the options provided, the best fit for these qualities is:
+
+D) эр чадалдаа эрэмшсэн (mastered their strength)
+
+Answer: D 
+
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Б.Лхагвасүрэн “Тамгагүй төр” жүжгийн хэсгийг уншаад, дотоод орчноос дүрийн сэтгэл
+хөдлөлийг тодорхойлоорой.
+Хамгийн сүүлчийн удаа
+Хаан гэдгээ мартан өлмийд чинь сөгдье.
+Эцсийн удаа гишгэсэн газрын чинь
+Эсгэсэн шороог би ус шиг залгилъя.
+
+A) сэтгэл нялхарсан
+B) сэтгэл догдолсон
+C) сэтгэл дэнсэлсэн
+D) сэтгэл уярсан
+E) сэтгэл хоргодсон</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s analyze the provided excerpt from B.Lhagvasuren&#39;s play &#34;Tamgagui Tor&#34; (The Unmarked Birth).
+
+The lines express a deep sense of loss and resignation. The speaker, likely the character of the Khan, acknowledges his downfall and impending death. He compares himself to a dried-up riverbed, longing for the life-giving water.
+
+Considering the imagery and tone, the most fitting description of the character&#39;s emotional state is:
+
+B) сэтгэл догдолсон (heartbroken) 
+
+
+Answer: B
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: B</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Гадаад үгэнд харьяалахын тийн ялгалын “-ийн, -ын” нөхцөлийг зөв дагуулан бичсэн хэсгийг
+олоорой.
+
+A) клубийн, брокерийн, тактикийн
+B) клубын, брокерын, тактикын
+C) клубийн, брокерын, тактикийн
+D) клубын, брокерийн, тактикын
+E) клубийн, брокерын, тактикын</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+The question asks us to identify the option that correctly uses the possessive suffixes &#34;-ийн&#34; and &#34;-ын&#34; according to Mongolian grammar rules.
+
+* &#34;-ийн&#34; is used for nouns ending in a vowel.
+* &#34;-ын&#34; is used for nouns ending in a consonant.
+
+Now let&#39;s analyze the options:
+
+* A) клубийн, брокерийн, тактикийн:  &#34;Клуб&#34; ends in a consonant, so it should be &#34;клубын&#34;.
+* B) клубын, брокерын, тактикын: This option seems correct at first glance.
+* C) клубийн, брокерын, тактикийн: Same issue as option A with &#34;Клуб&#34;.
+* D) клубын, брокерийн, тактикын: Same issue as option A with &#34;Клуб&#34;.
+* E) клубийн, брокерын, тактикын: Same issue as option A with &#34;Клуб&#34;.
+
+Therefore, the correct answer is B.
+
+Answer: B
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: C</p>
+<p>Extracted Answer: B</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой.
+
+A) хромосом, ген, эс, бөөм
+B) доллар, иен, бонд, фунт
+C) хурд, хүч, чадал, магадлал
+D) арилжаа, нийлүүлэлт, үүсвэр
+E) орлуулал, цээрлэл, нэгдэл</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Let&#39;s break down the question:
+
+* &#34;Утгын нэгэн зүйлчлэлд хамаарах хэсгийг олоорой.&#34; translates to &#34;Find the part that belongs to one classification of biology.&#34;
+
+This means we&#39;re looking for a group of words that are all related to a biological concept.
+
+Let&#39;s analyze the options:
+
+* A) хромосом, ген, эс, бөөм: These are all biological terms related to cells and genetics.
+* B) доллар, иен, бонд, фунт: These are types of currency, not related to biology.
+* C) хурд, хүч, чадал, магадлал: These are physical concepts, not biological.
+* D) арилжаа, нийлүүлэлт, үүсвэр: These are economic terms, not biological.
+* E) орлуулал, цээрлэл, нэгдэл: These are general terms that could apply to various fields, not specifically biology.
+
+Therefore, the correct answer is A.
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: A</p>
+<p>Score: 1.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Б.Лхагвасүрэн “Тамгагүй төр” жүжгийн дараах хэсгүүдийн аль нь хаан төр ариун байх ёстойг
+харуулж байна вэ?
+
+A) Хүннү төрийн тамгыг барих
+Хүнгүй болчихоор нь
+Хоёр сүүн уулын цаана
+Хорин улаан горхины газар булчихсан.
+B)  Эгэрэг өрлөг надад хэлэхдээ
+Эцгийгээ үхэхээр чи
+Эхтэйгээ гэрлэнэ гэж хэлсэн
+Эрхэт төрийн ёс тийм гэсэн.
+C) Арав алхахад найм нь алдаа
+Адасга мэт араншинтай
+Хүний нүд жавраар хайрсан
+Хүүтэй юм байна, чи бид хоёр.
+D) Тэнгэрийн дор нэг л хаан
+Өөрийнхөө он цагийг элээж
+Өнгөрсөн хойно нь их орыг
+Өөр нэгэн нэхдэг нь учиртай.
+E)  Та бид хоёр үг таргалуулж суугаад яах вэ
+Тамгаа өгчих
+Сэтгэлээ барихыг хүсье
+Сэнтийг чинь бол бөгс минь олоод суучихна.</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>The correct answer is D. This line talks about the Khan&#39;s unique position under heaven and how he should rule.
+
+Answer: D
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: A</p>
+<p>Extracted Answer: D</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Answer the following multiple choice question. The last line of your response should be of the following format: &#39;Answer: $LETTER&#39; (without quotes) where LETTER is one of ABCDE. Think step by step before answering.
+
+Дараах үгсээс аль нь нутгийн аялгууны үг вэ?
+
+A) зайран
+B) богц
+C) жас
+D) боохой
+E) гос</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Here&#39;s the breakdown:
+
+* Нутгийн аялгууны үг means &#34;noun&#34;.
+
+* We need to identify the word from the list that is a noun.
+
+Let&#39;s analyze each option:
+
+* зайран -  a noun, meaning &#34;wild goat&#34;
+* богц - a noun, meaning &#34;a kind of bird&#34;
+* жас - a noun, meaning &#34;young person&#34;
+* боохой - a noun, meaning &#34;a kind of bird&#34;
+* гос - a noun, meaning &#34;a type of animal&#34;
+
+All the words are nouns.
+
+
+Answer: A
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: E</p>
+<p>Extracted Answer: A</p>
+<p>Score: 0.0</p>
+    <hr>
+    
+    </body>
+</html>

@@ -57,12 +57,18 @@ def main():
         # "claude-3-opus-20240229_empty": ClaudeCompletionSampler(
         #     model="claude-3-opus-20240229", system_message=None,
         # ),
-        "gemma-2-9b-it": ChatCompletionSampler(
-            model="gemma-2-9b-it",
-            system_message=OPENAI_SYSTEM_MESSAGE_API,
+        # "gemma-2-9b-it": ChatCompletionSampler(
+        #     model="gemma-2-9b-it",
+        #     system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:1234/v1"
+        # ),
+        "gemma-2-27b-it": ChatCompletionSampler(
+            model="google/gemma-2-27b-it",
+            # system_message=OPENAI_SYSTEM_MESSAGE_API,
             max_tokens=2048,
-            base_url="http://localhost:1234/v1"
-        )
+            base_url="http://localhost:8000/v1"
+        ),
     }
 
     grading_sampler = ChatCompletionSampler(model="gpt-4o")

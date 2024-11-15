@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message {
+                padding: 8px 16px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+            }
+            .message.user {
+                background-color: #B2DFDB;
+                color: #00695C;
+            }
+            .message.assistant {
+                background-color: #B39DDB;
+                color: #4527A0;
+            }
+            .message.system {
+                background-color: #EEEEEE;
+                color: #212121;
+            }
+            .role {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .variant {
+                color: #795548;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h1>Metrics</h1>
+    <table>
+    <tr>
+        <th>Metric</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td><b>Score</b></td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>mn</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>mn:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>group_non_latin</td>
+        <td>1.0</td>
+    </tr>
+    
+    <tr>
+        <td>group_non_latin:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    <tr>
+        <td>score:std</td>
+        <td>0.0</td>
+    </tr>
+    
+    </table>
+    
+    <h1>Examples</h1>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Энэ математикийн бодлогыг бод. Бодолтын алхамуудаа бичээд эцсийн хариултыг хамгийн сүүлийн мөрөнд “Хариулт:” гэсэн форматын дагуу бич. &#34;Хариулт:&#34; гэдгийн араас тооноос өөр юм битгий нэм.
+
+Болормаагийн нугаснууд өдөрт 16 өндөг гаргадаг. Тэр өглөө бүр 3 өндөг идэж, өдөр бүр 4 өндөг ашиглан жигнэмэг хийдэг. Харин үлдсэн өндгийг өдөр бүр фермерийн захаар $2-аар зардаг. Тэр өдөр бүр фермерийн зах дээр хэдэн доллар олдог вэ?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>1. **Өндөгний хэмжээ:** Болормаа 16 өндөг гаргадаг.
+
+2. **Идэж, жигнэмэг хийхэд хэрэгтэй өндөг:** 3 өндөг (идсэн) + 4 өндөг (жигнэмэг) = 7 өндөг
+
+3. **Захаар зардаг өндөг:** 16 өндөг (нийт) - 7 өндөг (идсэн ба жигнэмэг) = 9 өндөг
+
+4. **Захаар олсон мөнгө:** 9 өндөг * $2/өндөг = $18
+
+Хариулт: $18
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 18</p>
+<p>Extracted Answer: 18</p>
+<p>Score: True</p>
+    <hr>
+    
+    
+<h3>Prompt conversation</h3>
+
+
+<div class="message user">
+    <div class="role">
+    user 
+    
+    </div>
+    <div class="content">
+    <pre>Энэ математикийн бодлогыг бод. Бодолтын алхамуудаа бичээд эцсийн хариултыг хамгийн сүүлийн мөрөнд “Хариулт:” гэсэн форматын дагуу бич. &#34;Хариулт:&#34; гэдгийн араас тооноос өөр юм битгий нэм.
+
+Нэг дээл хийхэд хөх өнгийн 2 боодол болон түүнээс хоёр дахин бага цагааийн өнгийн даавуу ордог. Дээл хийхэд нийт хэдэн боодол даавуу ордог вэ?</pre>
+    </div>
+</div>
+
+<h3>Sampled message</h3>
+
+<div class="message assistant">
+    <div class="role">
+    assistant 
+    
+    </div>
+    <div class="content">
+    <pre>Хөх өнгийн боодол: 2
+
+Цагааны өнгийн боодол: 2 / 2 = 1
+
+Нийт боодол: 2 + 1 = 3
+
+
+Хариулт: 3 боодол 
+
+</pre>
+    </div>
+</div>
+<h3>Results</h3>
+<p>Correct Answer: 3</p>
+<p>Extracted Answer: 3</p>
+<p>Score: True</p>
+    <hr>
+    
+    </body>
+</html>
