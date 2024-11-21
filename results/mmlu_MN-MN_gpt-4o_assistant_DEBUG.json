@@ -1,6 +1,8 @@
 {
-  "mongolian": 0.3,
-  "mongolian:std": 0.45825756949558394,
-  "score:std": 0.45825756949558394,
-  "score": 0.3
+  "other": 0.7777777777777778,
+  "other:std": 0.41573970964154905,
+  "score:std": 0.4,
+  "mongolian": 1.0,
+  "mongolian:std": 0.0,
+  "score": 0.8
 }

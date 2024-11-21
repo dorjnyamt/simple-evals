@@ -79,7 +79,12 @@ subject2category = {
     "us_foreign_policy": "social_sciences",
     "virology": "other",
     "world_religions": "humanities",
-    "mongolian": "mongolian"
+    "mongolian": "mongolian",
+    "mongolian_history": "mongolian",
+    "biology": "stem",
+    "physics": "stem",
+    "mathemathics": "stem",
+    "social_science": "social-sciences"
 }
 
 
