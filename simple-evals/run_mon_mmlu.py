@@ -36,12 +36,48 @@ def main():
         #     max_tokens=2048,
         #     base_url="http://localhost:1234/v1"
         # ),
-        "gemma-2-27b-it": ChatCompletionSampler(
-            model="google/gemma-2-27b-it",
+        # "gemma-2-27b-it": ChatCompletionSampler(
+        #     model="google/gemma-2-27b-it",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),
+        # "gemma-2-9b-it": ChatCompletionSampler(
+        #     model="google/gemma-2-9b-it",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),
+        # "gemma-2-9b-Alpaca-MN": ChatCompletionSampler(
+        #     model="/home/dorjnyam/development/axolotl/saves/gemma-2-9b-Alpaca-MN-SFT-v0.1",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),
+        "Llama-3.1-8B-Alpaca-MN": ChatCompletionSampler(
+            model="/home/dorjnyam/development/axolotl/saves/Llama-3.1-8B-Alpaca-MN-SFT-v0.1",
             # system_message=OPENAI_SYSTEM_MESSAGE_API,
             max_tokens=2048,
             base_url="http://localhost:8000/v1"
         ),
+        # "Llama-3.1-8B-Instruct": ChatCompletionSampler(
+        #     model="meta-llama/Llama-3.1-8B-Instruct",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),
+        # "Mistral-7B-Instruct-v0.3": ChatCompletionSampler(
+        #     model="mistralai/Mistral-7B-Instruct-v0.3",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),  
+        # "Qwen2.5-7B-Instruct": ChatCompletionSampler(
+        #     model="Qwen/Qwen2.5-7B-Instruct",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),  
         # "o1-preview": O1ChatCompletionSampler(
         #     model="o1-preview",
         # ),

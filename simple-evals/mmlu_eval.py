@@ -89,7 +89,7 @@ subject2category = {
 
 
 class MMLUEval(Eval):
-    def __init__(self, num_examples: int | None = None, language: str = "EN-US"):
+    def __init__(self, num_examples: int | None = None, language: str = "MN-MN"):
         if language == "MN-MN":
             url = "monmmlu/mmlu_MN-MN.csv"
         elif language != "EN-US":

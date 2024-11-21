@@ -63,12 +63,48 @@ def main():
         #     max_tokens=2048,
         #     base_url="http://localhost:1234/v1"
         # ),
-        "gemma-2-27b-it": ChatCompletionSampler(
-            model="google/gemma-2-27b-it",
+        # "gemma-2-27b-it": ChatCompletionSampler(
+        #     model="google/gemma-2-27b-it",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),
+        # "gemma-2-9b-it": ChatCompletionSampler(
+        #     model="google/gemma-2-9b-it",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),
+        # "gemma-2-9b-Alpaca-MN": ChatCompletionSampler(
+        #     model="/home/dorjnyam/development/axolotl/saves/gemma-2-9b-Alpaca-MN-SFT-v0.1",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),
+        # "Llama-3.1-8B-Instruct": ChatCompletionSampler(
+        #     model="meta-llama/Llama-3.1-8B-Instruct",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),
+        # "Llama-3.1-8B-Alpaca-MN": ChatCompletionSampler(
+        #     model="/home/dorjnyam/development/axolotl/saves/Llama-3.1-8B-Alpaca-MN-SFT-v0.1",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),        
+        # "Mistral-7B-Instruct-v0.3": ChatCompletionSampler(
+        #     model="mistralai/Mistral-7B-Instruct-v0.3",
+        #     # system_message=OPENAI_SYSTEM_MESSAGE_API,
+        #     max_tokens=2048,
+        #     base_url="http://localhost:8000/v1"
+        # ),        
+        "Qwen2.5-14B-Instruct": ChatCompletionSampler(
+            model="Qwen/Qwen2.5-14B-Instruct",
             # system_message=OPENAI_SYSTEM_MESSAGE_API,
             max_tokens=2048,
             base_url="http://localhost:8000/v1"
-        ),
+        ),             
     }
 
     grading_sampler = ChatCompletionSampler(model="gpt-4o")
@@ -79,7 +115,7 @@ def main():
         # Set num_examples = None to reproduce full evals
         match eval_name:
             case "mmlu":
-                return MMLUEval(num_examples=1 if debug else 2500)
+                return MMLUEval(num_examples=None)
             case "math":
                 return MathEval(
                     equality_checker=equality_checker, num_examples=5 if debug else 2500
@@ -101,7 +137,7 @@ def main():
 
     evals = {
         # eval_name: get_evals(eval_name) for eval_name in ["simpleqa", "mmlu", "math", "gpqa", "mgsm", "drop"]
-        eval_name: get_evals(eval_name) for eval_name in ["mgsm"]
+        eval_name: get_evals(eval_name) for eval_name in ["mgsm", "mmlu"]
     }
     print(evals)
     debug_suffix = "_DEBUG" if debug else ""
